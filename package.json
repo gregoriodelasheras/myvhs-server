@@ -1,0 +1,29 @@
+{
+  "name": "myvhs",
+  "version": "1.0.0",
+  "description": "Web App for enthusiasts of 80's movies. All in one VHS!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregoriodelasheras/myVHS.git"
+  },
+  "keywords": [],
+  "author": "Francisco Gregorio de las Heras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregoriodelasheras/myVHS/issues"
+  },
+  "homepage": "https://github.com/gregoriodelasheras/myVHS#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  }
+}
