@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="#">
-    <img src="#" alt="Logo" width="600">
+    <img src="img/logo-readme.svg" alt="Logo" width="600">
   </a>
   <p align="center">
     Web App for enthusiasts of 80's movies. All in one VHS! Built with its own API and the MERN stack.
