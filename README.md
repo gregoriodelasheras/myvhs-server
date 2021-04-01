@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="#">
+  <a href="https://gregoriodelasheras.github.io/myVHS/">
     <img src="img/logo-readme.svg" alt="Logo" width="600">
   </a>
   <p align="center">
