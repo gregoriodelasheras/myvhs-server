@@ -138,7 +138,7 @@
                 <tr>
                   <th scope="row">3</th>
                   <td>Allow users to see which actors star in which movies.</td>
-                  <td>/movies/[title]/maincast</td>
+                  <td>/movies/[title]/actors</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
@@ -150,16 +150,15 @@
                   <th scope="row">4</th>
                   <td>
                     Allow users to view more information about different movies
-                    (Writers, Producers, Music Direction, Art Direction and the
-                    Movie Rating).
+                    (Writers, Producers, Music Direction and Art Direction).
                   </td>
                   <td>/movies/[title]/extradata</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
                     A JSON object holding extra data about a single movie
-                    queried, containing a writers, producers, musicDirection,
-                    artDirection and movieRating,
+                    queried, containing a writers, producers, musicDirection and
+                    artDirection,
                   </td>
                 </tr>
                 <tr>
@@ -223,7 +222,7 @@
                     Allow users to update their user info (username, password,
                     email, date of birth) through its ID.
                   </td>
-                  <td>/users/[id]</td>
+                  <td>/users/[_id]</td>
                   <td>PUT</td>
                   <td>None</td>
                   <td>A text message indicating the data that was updated.</td>
@@ -231,7 +230,7 @@
                 <tr>
                   <th scope="row">10</th>
                   <td>Allow existing users to deregister.</td>
-                  <td>/users/[id]</td>
+                  <td>/users/[_id]</td>
                   <td>DELETE</td>
                   <td>None</td>
                   <td>
@@ -244,7 +243,7 @@
                   <td>
                     Allow users to add a movie to their list of favorites.
                   </td>
-                  <td>/users/[id]/favmovies</td>
+                  <td>/users/[_id]/favoritemovies</td>
                   <td>POST</td>
                   <td>None</td>
                   <td>
@@ -257,7 +256,7 @@
                   <td>
                     Allow users to remove a movie from their list of favorites.
                   </td>
-                  <td>/users/[id]/favmovies</td>
+                  <td>/users/[_id]/favoritemovies</td>
                   <td>DELETE</td>
                   <td>None</td>
                   <td>
@@ -271,7 +270,7 @@
                     Allow users to create a "To Watch" list in addition to their
                     "Favorite Movies" list.
                   </td>
-                  <td>/users/[id]/towatch</td>
+                  <td>/users/[_id]/towatch</td>
                   <td>POST</td>
                   <td>None</td>
                   <td>
