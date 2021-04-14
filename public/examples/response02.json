@@ -1,0 +1,15 @@
+{
+  "genre": [
+    "6074aad84143dcecc5e180b8",
+    "6074aad84143dcecc5e180b9",
+    "6074aad84143dcecc5e180c0"
+  ],
+  "actors": ["60757890291ccb5f16ab2487"],
+  "_id": "60757c00291ccb5f16ab248e",
+  "title": "Back to the Future",
+  "director": "6075788e291ccb5f16ab247e",
+  "releaseYear": 1985,
+  "runTime": "1h 56min",
+  "imagePath": "https://pics.filmaffinity.com/back_to_the_future-100822308-large.jpg",
+  "description": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown."
+}

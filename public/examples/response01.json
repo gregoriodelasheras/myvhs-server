@@ -1,0 +1,169 @@
+[
+  {
+    "genre": [
+      "6074aad84143dcecc5e180b7",
+      "6074aad84143dcecc5e180b8",
+      "6074aad84143dcecc5e180bb"
+    ],
+    "actors": ["60757890291ccb5f16ab2489"],
+    "_id": "60757c00291ccb5f16ab248c",
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "director": "6075788e291ccb5f16ab247c",
+    "releaseYear": 1980,
+    "runTime": "2h 4min",
+    "imagePath": "https://pics.filmaffinity.com/star_wars_episode_v_the_empire_strikes_back-314829878-large.jpg",
+    "description": "After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued by Darth Vader and a bounty hunter named Boba Fett all over the galaxy."
+  },
+  {
+    "genre": ["6074aad84143dcecc5e180ba", "6074aad84143dcecc5e180bc"],
+    "actors": ["60757890291ccb5f16ab2488"],
+    "_id": "60757c00291ccb5f16ab248d",
+    "title": "The Shining",
+    "director": "6075788e291ccb5f16ab247d",
+    "releaseYear": 1980,
+    "runTime": "2h 26min",
+    "imagePath": "https://pics.filmaffinity.com/the_shining-453129380-large.jpg",
+    "description": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future."
+  },
+  {
+    "genre": [
+      "6074aad84143dcecc5e180b8",
+      "6074aad84143dcecc5e180b9",
+      "6074aad84143dcecc5e180c0"
+    ],
+    "actors": ["60757890291ccb5f16ab2487"],
+    "_id": "60757c00291ccb5f16ab248e",
+    "title": "Back to the Future",
+    "director": "6075788e291ccb5f16ab247e",
+    "releaseYear": 1985,
+    "runTime": "1h 56min",
+    "imagePath": "https://pics.filmaffinity.com/back_to_the_future-100822308-large.jpg",
+    "description": "Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown."
+  },
+  {
+    "genre": [
+      "6074aad84143dcecc5e180b7",
+      "6074aad84143dcecc5e180c0",
+      "6074aad84143dcecc5e180c2"
+    ],
+    "actors": ["60757890291ccb5f16ab2489"],
+    "_id": "60757c00291ccb5f16ab248f",
+    "title": "Blade Runner",
+    "director": "6075788e291ccb5f16ab247f",
+    "releaseYear": 1982,
+    "runTime": "1h 57min",
+    "imagePath": "https://pics.filmaffinity.com/blade_runner-351607743-large.jpg",
+    "description": "A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator."
+  },
+  {
+    "genre": ["6074aad84143dcecc5e180b7", "6074aad84143dcecc5e180b8"],
+    "actors": ["60757890291ccb5f16ab2489"],
+    "_id": "60757c00291ccb5f16ab2490",
+    "title": "Raiders of the Lost Ark",
+    "director": "6075788e291ccb5f16ab2480",
+    "releaseYear": 1981,
+    "runTime": "1h 55min",
+    "imagePath": "https://pics.filmaffinity.com/indiana_jones_raiders_of_the_lost_ark-316486950-large.jpg",
+    "description": "In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government to find the Ark of the Covenant before Adolf Hitler's Nazis can obtain its awesome powers."
+  },
+  {
+    "genre": ["6074aad84143dcecc5e180ba", "6074aad84143dcecc5e180c1"],
+    "actors": [],
+    "_id": "60757c00291ccb5f16ab2491",
+    "title": "Raging Bull",
+    "director": "6075788e291ccb5f16ab2481",
+    "releaseYear": 1980,
+    "runTime": "2h 9min",
+    "imagePath": "https://pics.filmaffinity.com/raging_bull-820857019-large.jpg",
+    "description": "The life of boxer Jake LaMotta, whose violence and temper that led him to the top in the ring destroyed his life outside of it."
+  },
+  {
+    "genre": [
+      "6074aad84143dcecc5e180b7",
+      "6074aad84143dcecc5e180b8",
+      "6074aad84143dcecc5e180c0"
+    ],
+    "actors": [],
+    "_id": "60757c00291ccb5f16ab2492",
+    "title": "Aliens",
+    "director": "6075788e291ccb5f16ab2482",
+    "releaseYear": 1986,
+    "runTime": "2h 17min",
+    "imagePath": "https://pics.filmaffinity.com/aliens-989223912-large.jpg",
+    "description": "Fifty-seven years after surviving an apocalyptic attack aboard her space vessel by merciless space creatures, Officer Ripley awakens from hyper-sleep and tries to warn anyone who will listen about the predators."
+  },
+  {
+    "genre": ["6074aad84143dcecc5e180ba"],
+    "actors": [],
+    "_id": "60757c00291ccb5f16ab2493",
+    "title": "Amadeus",
+    "director": "6075788e291ccb5f16ab2483",
+    "releaseYear": 1984,
+    "runTime": "2h 40min",
+    "imagePath": "https://pics.filmaffinity.com/amadeus-718368517-large.jpg",
+    "description": "The life, success and troubles of Wolfgang Amadeus Mozart, as told by Antonio Salieri, the contemporaneous composer who was insanely jealous of Mozart's talent and claimed to have murdered him."
+  },
+  {
+    "genre": ["6074aad84143dcecc5e180ba"],
+    "actors": [],
+    "_id": "60757c00291ccb5f16ab2494",
+    "title": "Once Upon a Time in America",
+    "director": "6075788e291ccb5f16ab2484",
+    "releaseYear": 1984,
+    "runTime": "3h 49min",
+    "imagePath": "https://pics.filmaffinity.com/once_upon_a_time_in_america-140935570-large.jpg",
+    "description": "A former Prohibition-era Jewish gangster returns to the Lower East Side of Manhattan over thirty years later, where he once again must confront the ghosts and regrets of his old life."
+  },
+  {
+    "genre": ["6074aad84143dcecc5e180b7", "6074aad84143dcecc5e180c2"],
+    "actors": [],
+    "_id": "60757c00291ccb5f16ab2495",
+    "title": "Die Hard",
+    "director": "6075788e291ccb5f16ab2485",
+    "releaseYear": 1988,
+    "runTime": "2h 12min",
+    "imagePath": "https://pics.filmaffinity.com/die_hard-336213173-large.jpg",
+    "description": "An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles."
+  },
+  {
+    "genre": [
+      "6074aad84143dcecc5e180b7",
+      "6074aad84143dcecc5e180b8",
+      "6074aad84143dcecc5e180c0"
+    ],
+    "actors": ["60757890291ccb5f16ab248a", "60757890291ccb5f16ab248b"],
+    "_id": "60757c00291ccb5f16ab2496",
+    "title": "Predator",
+    "director": "6075788e291ccb5f16ab2485",
+    "releaseYear": 1987,
+    "runTime": "1h 47min",
+    "imagePath": "https://pics.filmaffinity.com/predator-809928908-large.jpg",
+    "description": "A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior."
+  },
+  {
+    "genre": [
+      "6074aad84143dcecc5e180b8",
+      "6074aad84143dcecc5e180bb",
+      "6074aad84143dcecc5e180bf"
+    ],
+    "actors": [],
+    "_id": "60757c00291ccb5f16ab2497",
+    "title": "Legend",
+    "director": "6075788e291ccb5f16ab247f",
+    "releaseYear": 1985,
+    "runTime": "1h 34min",
+    "imagePath": "https://pics.filmaffinity.com/legend-394828225-large.jpg",
+    "description": "A young man must stop the Lord of Darkness from destroying daylight and marrying the woman he loves."
+  },
+  {
+    "genre": ["6074aad84143dcecc5e180b9", "6074aad84143dcecc5e180ba"],
+    "actors": [],
+    "_id": "60757c00291ccb5f16ab2498",
+    "title": "After Hours",
+    "director": "6075788e291ccb5f16ab2481",
+    "releaseYear": 1985,
+    "runTime": "1h 37min",
+    "imagePath": "https://pics.filmaffinity.com/after_hours-661821923-large.jpg",
+    "description": "An ordinary word processor has the worst night of his life after he agrees to visit a girl in Soho who he met that evening at a coffee shop."
+  }
+]

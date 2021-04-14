@@ -1,0 +1,13 @@
+{
+  "favoriteMovies": [],
+  "toWatchMovies": [],
+  "_id": "607755dab23ebb332c1161dc",
+  "name": "Updated Test Name",
+  "lastName": "Updated Test Lastname",
+  "birthday": "1900-01-01T00:00:00.000Z",
+  "country": "Testland",
+  "email": "updatedmail@testmail.com",
+  "username": "test",
+  "password": "newtestpassword",
+  "__v": 0
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "movies": ["60757c00291ccb5f16ab248e"],
+    "_id": "60757890291ccb5f16ab2487",
+    "name": "Michael J. Fox",
+    "bio": "Michael Andrew Fox, known professionally as Michael J. Fox, is a Canadian-American retired actor, author, film producer, and activist. Beginning his career in the 1970s, he first rose to prominence for portraying Alex P. Keaton on the NBC sitcom Family Ties (1982–1989). Fox achieved further recognition as protagonist Marty McFly in the Back to the Future film trilogy (1985–1990).",
+    "birthYear": 1961
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab248d"],
+    "_id": "60757890291ccb5f16ab2488",
+    "name": "Jack Nicholson",
+    "bio": "John Joseph Nicholson is an American actor and filmmaker whose career has spanned more than 60 years. He is known for having played a wide range of starring and supporting roles, including comic characters, romantic leads, anti-heroes and villains. In many of his films, he played the \"eternal outsider, the sardonic drifter\", someone who rebels against the social structure.",
+    "birthYear": 1937
+  },
+  {
+    "movies": [
+      "60757c00291ccb5f16ab248c",
+      "60757c00291ccb5f16ab248f",
+      "60757c00291ccb5f16ab2490"
+    ],
+    "_id": "60757890291ccb5f16ab2489",
+    "name": "Harrison Ford",
+    "bio": "Harrison Ford is an American actor, pilot, and environmental activist. As of 2019, the U.S. domestic box office grosses of his films total over $5.1 billion, with worldwide grosses surpassing $9.3 billion, placing him at No. 4 on the list of highest-grossing domestic box office stars of all time. In addition to his box office success, he is also an Academy Award nominee, a four-time Golden Globe nominee, a three-time Saturn Award winner, and the recipient of the AFI Life Achievement Award and the Cecil B. DeMille Award.",
+    "birthYear": 1942
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2496"],
+    "_id": "60757890291ccb5f16ab248a",
+    "name": "Arnold Schwarzenegger",
+    "bio": "Arnold Alois Schwarzenegger is an Austrian-American actor, producer, businessman, retired bodybuilder, and former politician who served as the 38th governor of California from 2003 to 2011. As of 2021, he is the most recent Republican governor of California.",
+    "birthYear": 1947
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2496"],
+    "_id": "60757890291ccb5f16ab248b",
+    "name": "Kevin Peter Hall",
+    "bio": "Kevin Peter Hall was an American actor best known for his roles as the title characters in the first two films in the Predator franchise and the title character of Harry in the film and television series, Harry and the Hendersons. He also appeared in the television series Misfits of Science and 227, along with the film Without Warning.",
+    "birthYear": 1955,
+    "deathYear": 1991
+  }
+]
