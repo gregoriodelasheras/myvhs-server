@@ -1,267 +1,331 @@
 /* eslint-disable no-console */
 const express = require('express');
+const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+const models = require('./models.js');
 
 const app = express();
-
-// Middleware function
+app.use(bodyParser.json());
 app.use(morgan('common'));
 
-// BONUS: in-memory array of objects
-const movies = [
-  {
-    title: 'Star Wars: Episode V - The Empire Strikes Back',
-    director: 'Irvin Kershner',
-    releaseDate: 1980,
-    runtime: '2h 4min',
-    genre: ['Action', 'Adventure', 'Fantasy'],
-    mainCast: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher'],
-    extraData: {
-      writers: ['Star Wars Writer 1', 'Star Wars Writer 1'],
-      producers: ['Star Wars Producer 1'],
-      musicDirection: 'Star Wars Music Director',
-      artDirection: 'Star Wars Art Director',
-      movieRating: 5,
-    },
-  },
-  {
-    title: 'The Shining',
-    director: 'Stanley Kubrick',
-    releaseDate: 1980,
-    runtime: '2h 26min',
-    genre: ['Drama', 'Horror'],
-    mainCast: ['Jack Nicholson', 'Shelley Duvall', 'Danny Lloyd'],
-  },
-  {
-    title: 'Back to the Future',
-    director: 'Robert Zemeckis',
-    releaseDate: 1985,
-    runtime: '1h 56min',
-    genre: ['Adventure', 'Comedy', 'Sci-Fi'],
-    mainCast: ['Michael J. Fox', 'Christopher Lloyd', 'Lea Thompson'],
-  },
-  {
-    title: 'Blade Runner',
-    director: 'Ridley Scott',
-    releaseDate: 1982,
-    runtime: '1h 57min',
-    genre: ['Action', 'Sci-Fi', 'Thriller'],
-    mainCast: ['Harrison Ford', 'Rutger Hauer', 'Sean Young'],
-  },
-  {
-    title: 'Raiders of the Lost Ark',
-    director: 'Steven Spielberg',
-    releaseDate: 1981,
-    runtime: '1h 55min',
-    genre: ['Action', 'Adventure'],
-    mainCast: ['Harrison Ford', 'Karen Allen', 'Paul Freeman'],
-  },
-  {
-    title: 'Raging Bull',
-    director: 'Martin Scorsese',
-    releaseDate: 1980,
-    runtime: '2h 9min',
-    genre: ['Biography', 'Drama', 'Sport'],
-    mainCast: ['Robert De Niro', 'Cathy Moriarty', 'Joe Pesci'],
-  },
-  {
-    title: 'Aliens',
-    director: 'James Cameron',
-    releaseDate: 1986,
-    runtime: '2h 17min',
-    genre: ['Action', 'Adventure', 'Sci-Fi'],
-    mainCast: ['Sigourney Weaver', 'Michael Biehn', 'Carrie Henn'],
-  },
-  {
-    title: 'Amadeus',
-    director: 'Milos Forman',
-    releaseDate: 1984,
-    runtime: '2h 40min',
-    genre: ['Biography', 'Drama', 'History'],
-    mainCast: ['F. Murray Abraham', 'Tom Hulce', 'Elizabeth Berridge'],
-    extraData: {
-      writers: ['Amadeus Writer 1', 'Amadeus Writer 1'],
-      producers: ['Amadeus Producer 1'],
-      musicDirection: 'Amadeus Music Director',
-      artDirection: 'Amadeus Art Director',
-      movieRating: 4,
-    },
-  },
-  {
-    title: 'Once Upon a Time in America',
-    director: 'Sergio Leone',
-    releaseDate: 1984,
-    runtime: '3h 49min',
-    genre: ['Crime', 'Drama'],
-    mainCast: ['Robert De Niro', 'James Woods', 'Elizabeth McGovern'],
-  },
-  {
-    title: 'Die Hard',
-    director: 'John McTiernan',
-    releaseDate: 1988,
-    runtime: '2h 12min',
-    genre: ['Action', 'Thriller'],
-    mainCast: ['Bruce Willis', 'Alan Rickman', 'Bonnie Bedelia'],
-  },
-];
+const movies = models.movie;
+const genres = models.genre;
+const directors = models.director;
+const actors = models.actor;
+const users = models.user;
+mongoose.set('useFindAndModify', false);
+mongoose.connect('mongodb://localhost:27017/myVHS', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-const moviesGenre = [
-  {
-    name: 'Action',
-    movies: [
-      'Star Wars: Episode V - The Empire Strikes Back',
-      'Blade Runner',
-      'Raiders of the Lost Ark',
-      'Aliens',
-      'Die Hard',
-    ],
-  },
-  {
-    name: 'Drama',
-    movies: [
-      'The Shining',
-      'Raging Bull',
-      'Amadeus',
-      'Once Upon a Time in America',
-    ],
-  },
-  {
-    name: 'Sci-Fi',
-    movies: ['Back to the Future', 'Blade Runner', 'Aliens'],
-  },
-  {
-    name: 'Adventure',
-    movies: [
-      'Star Wars: Episode V - The Empire Strikes Back',
-      'Back to the Future',
-      'Raiders of the Lost Ark',
-      'Aliens',
-    ],
-  },
-  {
-    name: 'Comedy',
-    movies: ['Back to the Future'],
-  },
-];
-
-const directors = [
-  {
-    name: 'Irvin Kershner',
-    birthYear: 1923,
-    deathYear: 2010,
-    bio:
-      'He gained notice early in his career as a filmmaker for directing quirky, independent drama films, while working as an influential lecturer at the University of Southern California. Later in his career, he transitioned to high-budget blockbusters such as The Empire Strikes Back, the James Bond adaptation Never Say Never Again, and RoboCop 2. Through the course of his career, he received numerous accolades, and was nominated for both a Primetime Emmy Award and a Palme dOr.',
-    works: [
-      'Stakeout on Dope Street',
-      'The Young Captives',
-      'Hoodlum Priest',
-      'Face in the Rain',
-      'The Luck of Ginger Coffey',
-      'The Empire Strikes Back',
-      'Never Say Never Again',
-      'RoboCop 2',
-    ],
-  },
-];
-
-const actors = [
-  {
-    name: 'Michael J. Fox',
-    birthYear: 1961,
-    deathYear: null,
-    bio:
-      'Michael J. Fox was born Michael Andrew Fox on June 9, 1961 in Edmonton, Alberta, Canada, to Phyllis Fox (née Piper), a payroll clerk, and William Fox. His parents moved their 10-year-old son, his three sisters, Kelli Fox, Karen, and Jacki, and his brother Steven, to Vancouver, British Columbia, after his father, a sergeant in the Canadian Army Signal Corps, retired. During these years Michael developed his desire to act.',
-    works: [
-      'Midnight Madness',
-      'Back to the Future',
-      'Teen Wolf',
-      'Back to the Future Part II',
-      'Back to the Future Part III',
-      'Doc Hollywood',
-    ],
-  },
-];
-
-// BONUS - Endpoint 1: Return a list of all movies to the user.
+// Endpoint 01: Return a list of all movies to the user.
 app.get('/movies', (req, res) => {
-  res.json(movies);
+  movies
+    .find()
+    .then((moviesQueried) => {
+      res.status(201).json(moviesQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// BONUS: Endpoint 2: Return data about a single movie by title to the user.
+// Endpoint 02: Return data about a single movie by title to the user.
 app.get('/movies/:title', (req, res) => {
-  res.json(movies.find((movie) => movie.title === req.params.title));
+  movies
+    .findOne({ title: req.params.title })
+    .then((movieQueried) => {
+      res.json(movieQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 3: Allow users to see which actors star in which movies.
-app.get('/movies/:title/maincast', (req, res) => {
-  const titleFilm = movies.find((movie) => movie.title === req.params.title);
-  res.json(titleFilm.mainCast);
-  res.send(
-    'Endpoint 3: Successful GET request returning data of which actors star in the queried movie.',
-  );
+// Endpoint 03: Return a list of the cast of a movie by title to the user.
+app.get('/movies/:title/cast', (req, res) => {
+  movies
+    .findOne({ title: req.params.title })
+    .then((movieQueried) => {
+      res.json(movieQueried.actors);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 4: Allow users to view more information about different movies
-app.get('/movies/:title/extradata', (req, res) => {
-  const titleFilm = movies.find((movie) => movie.title === req.params.title);
-  res.json(titleFilm.extraData);
+// Endpoint 04: Return a list of all movie genres to the user.
+app.get('/genres', (req, res) => {
+  genres
+    .find()
+    .then((genresQueried) => {
+      res.status(201).json(genresQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 5: Return data about a genre by name.
-app.get('/genre/:name', (req, res) => {
-  res.json(moviesGenre.find((genre) => genre.name === req.params.name));
+// Endpoint 05: Return data about a movie genre by name.
+app.get('/genres/:name', (req, res) => {
+  genres
+    .findOne({ name: req.params.name })
+    .then((genreQueried) => {
+      res.json(genreQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 6: Return data about a director by name.
+// Endpoint 06: Return a list of all directors to the user.
+app.get('/directors', (req, res) => {
+  directors
+    .find()
+    .then((directorsQueried) => {
+      res.status(201).json(directorsQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
+});
+
+// Endpoint 07: Return data about a director by name.
 app.get('/directors/:name', (req, res) => {
-  res.json(directors.find((director) => director.name === req.params.name));
+  directors
+    .findOne({ name: req.params.name })
+    .then((directorQueried) => {
+      res.json(directorQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 7: Allow users to view information about different actors.
+// Endpoint 08: Return a list of all actors to the user.
+app.get('/actors', (req, res) => {
+  actors
+    .find()
+    .then((actorsQueried) => {
+      res.status(201).json(actorsQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
+});
+
+// Endpoint 09: Return data about an actor by name.
 app.get('/actors/:name', (req, res) => {
-  res.json(actors.find((actor) => actor.name === req.params.name));
+  actors
+    .findOne({ name: req.params.name })
+    .then((actorQueried) => {
+      res.json(actorQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 8: Allow new users to register.
+// Endpoint 10: Allow an Admin to view all registered users in the database.
+app.get('/users', (req, res) => {
+  users
+    .find()
+    .then((usersQueried) => {
+      res.status(201).json(usersQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
+});
+
+// Endpoint 11: Allow an Admin to view a registered user in the database by username.
+app.get('/users/:username', (req, res) => {
+  users
+    .findOne({ username: req.params.username })
+    .then((userQueried) => {
+      res.json(userQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
+});
+
+// Endpoint 12: Allow new users to register.
 app.post('/users', (req, res) => {
-  res.send(
-    'Endpoint 8: Successful POST request creating a new user in the database',
-  );
+  users
+    .findOne({ username: req.body.username })
+    .then((user) => {
+      if (user) {
+        return res
+          .status(400)
+          .send(
+            `Apologies, the username "${req.body.username}" has already been taken.`,
+          );
+      }
+      users
+        .create({
+          name: req.body.name,
+          lastName: req.body.lastName,
+          birthday: req.body.birthday,
+          country: req.body.country,
+          email: req.body.email,
+          username: req.body.username,
+          password: req.body.password,
+        })
+        .then((userQueried) => {
+          res.status(201).json(userQueried);
+        })
+        .catch((error) => {
+          console.error(error);
+          res.status(500).send(`Error: ${error}`);
+        });
+      return true;
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).send(`Error: ${error}`);
+    });
 });
 
-// Endpoint 9: Allow users to update their user info through its ID.
-app.put('/users/:id', (req, res) => {
-  res.send(
-    'Endpoint 9: Successful PUT request updating the user info in the database',
-  );
+// Endpoint 13: Allow users to update their data by username.
+app.put('/users/:username', (req, res) => {
+  users
+    .findOneAndUpdate(
+      { username: req.params.username },
+      {
+        $set: {
+          name: req.body.name,
+          lastName: req.body.lastName,
+          birthday: req.body.birthday,
+          country: req.body.country,
+          email: req.body.email,
+          username: req.body.username,
+          password: req.body.password,
+        },
+      },
+      { new: true },
+    )
+    .then((userQueried) => {
+      res.status(201).json(userQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 10: Allow existing users to deregister.
-app.delete('/users/:id', (req, res) => {
-  res.send(
-    'Endpoint 10: Successful DELETE request deleting the user from the database',
-  );
+// Endpoint 14: Allow existing users to deregister by username.
+app.delete('/users/:username', (req, res) => {
+  users
+    .findOneAndDelete({ username: req.params.username })
+    .then((userQueried) => {
+      if (!userQueried) {
+        res
+          .status(400)
+          .send(
+            `Apologies, the username "${req.params.username}" was not found in the database.`,
+          );
+      } else {
+        res
+          .status(200)
+          .send(
+            `The user with username "${req.params.username}" has been deleted from the database.`,
+          );
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 11: Allow users to add a movie to their list of favorites.
-app.post('/users/:id/favmovies', (req, res) => {
-  res.send(
-    'Endpoint 11: Successful POST request adding a movie to the "Favorite Movies" list.',
-  );
+// Endpoint 15: Allow users to add a movie to their "Favorites" list by movie ID.
+app.post('/users/:username/favorites/:movie_id', (req, res) => {
+  users
+    .findOneAndUpdate(
+      { username: req.params.username },
+      {
+        $addToSet: { favoriteMovies: req.params.movie_id },
+      },
+      { new: true },
+    )
+    .then((userQueried) => {
+      res.status(201).json(userQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 12: Allow users to remove a movie from their list of favorites.
-app.delete('/users/:id/favmovies', (req, res) => {
-  res.send(
-    'Endpoint 12: Successful DELETE request deleting the movie from the "Favorite Movies" list.',
-  );
+// Endpoint 16: Allow users to remove a movie from their "Favorites" list by movie ID.
+app.delete('/users/:username/favorites/:movie_id', (req, res) => {
+  users
+    .findOneAndUpdate(
+      { username: req.params.username },
+      {
+        $pull: { favoriteMovies: req.params.movie_id },
+      },
+      { new: true },
+    )
+    .then((userQueried) => {
+      res.status(201).json(userQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
-// Endpoint 13: Allow users to create a "To Watch" list in addition to their "Favorite Movies" list.
-app.post('/users/:id/towatch', (req, res) => {
-  res.send(
-    'Endpoint 13: Successful POST request adding a movie to the "To Watch" list.',
-  );
+// Endpoint 17: Allow users to add a movie to their "To Watch" list by movie ID.
+app.post('/users/:username/towatch/:movie_id', (req, res) => {
+  users
+    .findOneAndUpdate(
+      { username: req.params.username },
+      {
+        $addToSet: { toWatchMovies: req.params.movie_id },
+      },
+      { new: true },
+    )
+    .then((userQueried) => {
+      res.status(201).json(userQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
+});
+
+// Endpoint 18: Allow users to remove a movie from their "To Watch" list by movie ID.
+app.delete('/users/:username/towatch/:movie_id', (req, res) => {
+  users
+    .findOneAndUpdate(
+      { username: req.params.username },
+      {
+        $pull: { toWatchMovies: req.params.movie_id },
+      },
+      { new: true },
+    )
+    .then((userQueried) => {
+      res.status(201).json(userQueried);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send(`Error: ${err}`);
+    });
 });
 
 // Serving static files
