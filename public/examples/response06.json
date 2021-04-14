@@ -1,0 +1,76 @@
+[
+  {
+    "movies": ["60757c00291ccb5f16ab248c"],
+    "_id": "6075788e291ccb5f16ab247c",
+    "name": "Irvin Kershner",
+    "bio": "Irvin Kershner was an American director, actor, and producer of film and television. He gained notice early in his career as a filmmaker for directing quirky, independent drama films, while working as an influential lecturer at the University of Southern California. Later in his career, he transitioned to high-budget blockbusters such as The Empire Strikes Back, the James Bond adaptation Never Say Never Again, and RoboCop 2. Through the course of his career, he received numerous accolades, and was nominated for both a Primetime Emmy Award and a Palme d'Or.",
+    "birthYear": 1923,
+    "deathYear": 2010
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab248d"],
+    "_id": "6075788e291ccb5f16ab247d",
+    "name": "Stanley Kubrick",
+    "bio": "Stanley Kubrick was an American film director, producer, screenwriter, and photographer. He is frequently cited as one of the greatest filmmakers in cinematic history. His films, which are mostly adaptations of novels or short stories, cover a wide range of genres, and are noted for their realism, dark humor, unique cinematography, extensive set designs, and evocative use of music.",
+    "birthYear": 1928,
+    "deathYear": 1999
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab248e"],
+    "_id": "6075788e291ccb5f16ab247e",
+    "name": "Robert Zemeckis",
+    "bio": "Robert Lee Zemeckis is an American film director, film producer, and screenwriter who is frequently credited as an innovator in visual effects. He first came to public attention in the 1980s as the director of Romancing the Stone (1984) and the science-fiction comedy Back to the Future film trilogy, as well as the live-action/animated comedy Who Framed Roger Rabbit (1988). In the 1990s, he directed Death Becomes Her and then diversified into more dramatic fare, including 1994's Forrest Gump, for which he won an Academy Award for Best Director; the film itself won Best Picture. The films he has directed have ranged across a wide variety of genres, for both adults and families.",
+    "birthYear": 1952
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab248f", "60757c00291ccb5f16ab2497"],
+    "_id": "6075788e291ccb5f16ab247f",
+    "name": "Ridley Scott",
+    "bio": "Ridley Scott is an English film director and producer. He has directed the science fiction horror film Alien (1979), the neo-noir dystopian film Blade Runner (1982), the road adventure film Thelma & Louise (1991), the historical drama film Gladiator (2000), the war film Black Hawk Down (2001), and the science fiction film The Martian (2015).",
+    "birthYear": 1937
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2490"],
+    "_id": "6075788e291ccb5f16ab2480",
+    "name": "Steven Spielberg",
+    "bio": "Steven Allan Spielberg is an American film director, producer, and screenwriter. He began his career in the New Hollywood era, and is one of the most commercially successful directors in history. Spielberg is the recipient of various accolades, including two Academy Awards for Best Director, a Kennedy Center honor, and a Cecil B. DeMille Award.",
+    "birthYear": 1946
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2491", "60757c00291ccb5f16ab2498"],
+    "_id": "6075788e291ccb5f16ab2481",
+    "name": "Martin Scorsese",
+    "bio": "Martin Charles Scorsese is an American film director, producer, screenwriter, and actor. One of the major figures of the New Hollywood era, he is widely regarded as one of the most significant and influential directors in film history. Scorsese's body of work explores themes such as Italian-American identity, Catholic concepts of guilt and redemption, faith, machismo, nihilism, crime and sectarianism. Many of his films are known for their depiction of violence and the liberal use of profanity.",
+    "birthYear": 1942
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2492"],
+    "_id": "6075788e291ccb5f16ab2482",
+    "name": "James Cameron",
+    "bio": "James Francis Cameron is a Canadian film director, producer, screenwriter, editor, and environmentalist. He is best known for making science fiction and epic films. Cameron first gained recognition for directing The Terminator (1984). He found further critical and commercial success with Aliens (1986), The Abyss (1989), Terminator 2: Judgment Day (1991), and the comedy thriller True Lies (1994). His other big-budget productions include Titanic (1997) and Avatar (2009), with Titanic earning him Academy Awards in Best Picture, Best Director and Best Film Editing.",
+    "birthYear": 1954
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2493"],
+    "_id": "6075788e291ccb5f16ab2483",
+    "name": "Milos Forman",
+    "bio": "Jan Tomáš \"Miloš\" Forman was a Czech-American film director, screenwriter, actor, and professor who rose to fame in his native Czechoslovakia before immigrating to the United States in 1968. Forman was an important figure in the Czechoslovak New Wave. Film scholars and Czechoslovakian authorities saw his 1967 film The Firemen's Ball as a biting satire on Eastern European Communism, and it was banned for many years in his home country. He left Czechoslovakia for the United States, where he gained critical and financial success.",
+    "birthYear": 1932,
+    "deathYear": 2018
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2494"],
+    "_id": "6075788e291ccb5f16ab2484",
+    "name": "Sergio Leone",
+    "bio": "Sergio Leone was an Italian film director, producer and screenwriter, credited as the creator of the Spaghetti Western genre and widely regarded as one of the most influential directors in the history of cinema. Leone's film-making style includes juxtaposing extreme close-up shots with lengthy long shots.",
+    "birthYear": 1929,
+    "deathYear": 1989
+  },
+  {
+    "movies": ["60757c00291ccb5f16ab2495", "60757c00291ccb5f16ab2496"],
+    "_id": "6075788e291ccb5f16ab2485",
+    "name": "John McTiernan",
+    "bio": "John Campbell McTiernan Jr. is an American filmmaker. He is best known for his action films, especially Predator (1987), Die Hard (1988), and The Hunt for Red October (1990). His later well-known films include the action-comedy-fantasy film Last Action Hero (1993), the action film sequel Die Hard with a Vengeance (1995), the heist-film remake The Thomas Crown Affair (1999), and The 13th Warrior (1999). His last completed feature film was the mystery-thriller Basic, released in 2003.",
+    "birthYear": 1951
+  }
+]

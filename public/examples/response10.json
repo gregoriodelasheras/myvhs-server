@@ -1,0 +1,71 @@
+[
+  {
+    "favoriteMovies": [
+      "60757c00291ccb5f16ab2494",
+      "60757c00291ccb5f16ab2498",
+      "60757c00291ccb5f16ab2492"
+    ],
+    "toWatchMovies": [],
+    "_id": "6075879b291ccb5f16ab249a",
+    "name": "Test Name 1",
+    "lastName": "Test Lastname 1",
+    "birthday": "1950-01-01T00:00:00.000Z",
+    "country": "Chile",
+    "email": "test1@gmail.com",
+    "username": "test1",
+    "password": "pass1"
+  },
+  {
+    "favoriteMovies": [
+      "60757c00291ccb5f16ab2495",
+      "60757c00291ccb5f16ab2496",
+      "60757c00291ccb5f16ab2493"
+    ],
+    "toWatchMovies": [],
+    "_id": "6075879b291ccb5f16ab249a",
+    "name": "Test Name 2",
+    "lastName": "Test Lastname 2",
+    "birthday": "1960-01-01T00:00:00.000Z",
+    "country": "Germany",
+    "email": "test2@gmail.com",
+    "username": "test2",
+    "password": "pass2"
+  },
+  {
+    "favoriteMovies": ["60757c00291ccb5f16ab248e", "60757c00291ccb5f16ab248f"],
+    "toWatchMovies": [],
+    "_id": "6075879b291ccb5f16ab249a",
+    "name": "Test Name 3",
+    "lastName": "Test Lastname 3",
+    "birthday": "1970-01-01T00:00:00.000Z",
+    "country": "Japan",
+    "email": "test3@gmail.com",
+    "username": "test3",
+    "password": "pass3"
+  },
+  {
+    "favoriteMovies": ["60757c00291ccb5f16ab248c", "60757c00291ccb5f16ab248d"],
+    "toWatchMovies": [],
+    "_id": "6075879b291ccb5f16ab249a",
+    "name": "Test Name 4",
+    "lastName": "Test Lastname 4",
+    "birthday": "1980-01-01T00:00:00.000Z",
+    "country": "Nigeria",
+    "email": "test4@gmail.com",
+    "username": "test4",
+    "password": "pass4"
+  },
+  {
+    "favoriteMovies": [],
+    "toWatchMovies": [],
+    "_id": "6075879b291ccb5f16ab249a",
+    "name": "Test Name 5",
+    "lastName": "Test Lastname 5",
+    "birthday": "1980-01-01T00:00:00.000Z",
+    "country": "Australia",
+    "email": "test5@gmail.com",
+    "username": "test5",
+    "password": "pass5",
+    "__v": 0
+  }
+]

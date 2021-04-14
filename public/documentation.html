@@ -51,35 +51,39 @@
           <h2>Key Features:</h2>
           <ul>
             <li>Return a list of all movies to the user.</li>
+            <li>Return data about a single movie by title to the user.</li>
+            <li>Return a list of the cast of a movie by title to the user.</li>
+            <li>Return a list of all movie genres to the user.</li>
             <li>
-              Return data (description, genre, director, image URL, whether it’s
-              featured or not) about a single movie by title to the user.
+              Return data about a movie genre by name. (e.g., "Adventure").
+            </li>
+            <li>Return a list of all directors to the user.</li>
+            <li>Return data about a director by name.</li>
+            <li>Return a list of all actors to the user.</li>
+            <li>Return data about an actor by name.</li>
+            <li>
+              Allow an Admin to view all registered users in the database.
             </li>
             <li>
-              Return data about a genre (description) by name/title (e.g.,
-              “Thriller”).
-            </li>
-            <li>
-              Return data about a director (bio, birth year, death year) by
-              name.
+              Allow an Admin to view a registered user in the database by
+              username.
             </li>
             <li>Allow new users to register.</li>
+            <li>Allow users to update their data by username.</li>
+            <li>Allow existing users to deregister by username.</li>
             <li>
-              Allow users to update their user info (username, password, email,
-              date of birth).
-            </li>
-            <li>Allow users to add a movie to their list of favorites.</li>
-            <li>Allow users to remove a movie from their list of favorites.</li>
-            <li>Allow existing users to deregister.</li>
-            <li>Allow users to see which actors star in which movies.</li>
-            <li>Allow users to view information about different actors.</li>
-            <li>
-              Allow users to view more information about different movies, such
-              as the release date and the movie rating.
+              Allow users to add a movie to their "Favorites" list by movie ID.
             </li>
             <li>
-              Allow users to create a “To Watch” list in addition to their
-              “Favorite Movies” list.
+              Allow users to remove a movie from their "Favorites" list by movie
+              ID.
+            </li>
+            <li>
+              Allow users to add a movie to their "To Watch" list by movie ID.
+            </li>
+            <li>
+              Allow users to remove a movie from their "To Watch" list by movie
+              ID.
             </li>
           </ul>
         </div>
@@ -112,170 +116,313 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
+                  <th scope="row">01</th>
                   <td>Return a list of all movies to the user.</td>
                   <td>/movies</td>
                   <td>GET</td>
                   <td>None</td>
-                  <td>A JSON object holding data about all the movies.</td>
+                  <td>
+                    A JSON object holding data about all the movies, containing
+                    title, genre, director, actors, releaseYear, runTime,
+                    imagePath and description.
+                    <a href="examples/response01.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
+                  <th scope="row">02</th>
                   <td>
-                    Return data (description, genre, director, image URL,
-                    whether it’s featured or not) about a single movie by title
-                    to the user.
+                    Return data about a single movie by title to the user.
                   </td>
-                  <td>/movies/[title]</td>
+                  <td>/movies/:title</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
                     A JSON object holding data about a single movie queried,
-                    containing a title, director, releaseDate, runtime, genre
-                    and mainCast.
+                    containing title, genre, director, actors, releaseYear,
+                    runTime, imagePath and description.
+                    <a href="examples/response02.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
-                  <td>Allow users to see which actors star in which movies.</td>
-                  <td>/movies/[title]/actors</td>
+                  <th scope="row">03</th>
+                  <td>
+                    Return a list of the cast of a movie by title to the user.
+                  </td>
+                  <td>/movies/:title/cast</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
-                    A JSON object holding about a single movie queried,
+                    A JSON object holding data about a single movie queried,
                     containing the list of the actors stars acting in it.
+                    <a href="examples/response03.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">4</th>
-                  <td>
-                    Allow users to view more information about different movies
-                    (Writers, Producers, Music Direction and Art Direction).
-                  </td>
-                  <td>/movies/[title]/extradata</td>
+                  <th scope="row">04</th>
+                  <td>Return a list of all movie genres to the user.</td>
+                  <td>/genres</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
-                    A JSON object holding extra data about a single movie
-                    queried, containing a writers, producers, musicDirection and
-                    artDirection,
+                    A JSON object holding data about all the movie genres,
+                    containing name and description.
+                    <a href="examples/response04.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">5</th>
-                  <td>
-                    Return data about a genre (description) by name/title (e.g.,
-                    “Thriller”).
-                  </td>
-                  <td>/genre/[name]</td>
+                  <th scope="row">05</th>
+                  <td>Return data about a movie genre by name.</td>
+                  <td>/genres/:name</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
-                    A JSON object holding data about the film genre queried.
+                    A JSON object holding data about the movie genre queried,
+                    containing name and description.
+                    <a href="examples/response05.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">6</th>
-                  <td>
-                    Return data about a director (bio, birth year, death year,
-                    works) by name.
-                  </td>
-                  <td>/director/[name]</td>
+                  <th scope="row">06</th>
+                  <td>Return a list of all directors to the user.</td>
+                  <td>/directors</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
-                    A JSON object holding data about the film director queried,
-                    containing a name, birthYear, deathYear, bio and works.
+                    A JSON object holding data about all the movie directors,
+                    containing name, bio, birthYear, deathYear and movies.
+                    <a href="examples/response06.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">7</th>
-                  <td>
-                    Allow users to view information about different actors.
-                  </td>
-                  <td>/actors/[name]</td>
+                  <th scope="row">07</th>
+                  <td>Return data about a director by name.</td>
+                  <td>/directors/:name</td>
                   <td>GET</td>
                   <td>None</td>
                   <td>
-                    A JSON object holding data about the actor queried,
-                    containing a name, birthYear, deathYear, bio and works.
+                    A JSON object holding data about the movie director queried,
+                    containing name, bio, birthYear, deathYear and movies.
+                    <a href="examples/response07.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
-                  <th scope="row">8</th>
-                  <td>Allow new users to register.</td>
-                  <td>/users</td>
-                  <td>POST</td>
-                  <td>
-                    A JSON object holding data about the user to add, containing
-                    an ID, username, password, name, email and date of birth.
-                  </td>
-                  <td>
-                    A JSON object holding data about the user that was added,
-                    containing id, username, password, name, email and
-                    birthDate.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">9</th>
-                  <td>
-                    Allow users to update their user info (username, password,
-                    email, date of birth) through its ID.
-                  </td>
-                  <td>/users/[_id]</td>
-                  <td>PUT</td>
+                  <th scope="row">08</th>
+                  <td>Return a list of all actors to the user.</td>
+                  <td>/actors</td>
+                  <td>GET</td>
                   <td>None</td>
-                  <td>A text message indicating the data that was updated.</td>
+                  <td>
+                    A JSON object holding data about all the movie actors,
+                    containing name, bio, birthYear, deathYear and movies.
+                    <a href="examples/response08.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">09</th>
+                  <td>Return data about an actor by name.</td>
+                  <td>/actors/:name</td>
+                  <td>GET</td>
+                  <td>None</td>
+                  <td>
+                    A JSON object holding data about the movie actor queried,
+                    containing name, bio, birthYear, deathYear and movies.
+                    <a href="examples/response09.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row">10</th>
-                  <td>Allow existing users to deregister.</td>
-                  <td>/users/[_id]</td>
-                  <td>DELETE</td>
+                  <td>
+                    Allow an Admin to view all registered users in the database.
+                  </td>
+                  <td>/users</td>
+                  <td>GET</td>
                   <td>None</td>
                   <td>
-                    A text message indicating the name of the user who was
-                    deleted from the database.
+                    A JSON object holding data about all the users, containing
+                    name, lastName, birthday, country, email, username,
+                    password, favoriteMovies and toWatchMovies.
+                    <a href="examples/response10.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">11</th>
                   <td>
-                    Allow users to add a movie to their list of favorites.
+                    Allow an Admin to view a registered user in the database by
+                    username.
                   </td>
-                  <td>/users/[_id]/favoritemovies</td>
-                  <td>POST</td>
+                  <td>/users/:username</td>
+                  <td>GET</td>
                   <td>None</td>
                   <td>
-                    A text message indicating the name of the movie that was
-                    added to the "Favorite Movies" list.
+                    A JSON object holding data about the user queried,
+                    containing name, lastName, birthday, country, email,
+                    username, password, favoriteMovies and toWatchMovies.
+                    <a href="examples/response11.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">12</th>
+                  <td>Allow new users to register.</td>
+                  <td>/users</td>
+                  <td>POST</td>
                   <td>
-                    Allow users to remove a movie from their list of favorites.
+                    A JSON object holding data about the user to add, containing
+                    name, lastName, birthday, country, email, username,
+                    password, favoriteMovies and toWatchMovies.
+                    <a href="examples/response12.json" target="_blank">
+                      View example
+                    </a>
                   </td>
-                  <td>/users/[_id]/favoritemovies</td>
-                  <td>DELETE</td>
-                  <td>None</td>
                   <td>
-                    A text message indicating the name of the movie that was
-                    removed from the "Favorite Movies" list.
+                    A JSON object holding data about the user that was added,
+                    containing name, lastName, birthday, country, email,
+                    username, password, favoriteMovies and toWatchMovies.
+                    <a href="examples/response12.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">13</th>
+                  <td>Allow users to update their data by username.</td>
+                  <td>/users/:username</td>
+                  <td>PUT</td>
                   <td>
-                    Allow users to create a "To Watch" list in addition to their
-                    "Favorite Movies" list.
+                    A JSON object holding data about the user to update,
+                    containing name, lastName, birthday, country, email,
+                    username, password, favoriteMovies and toWatchMovies.
+                    <a href="examples/response13.json" target="_blank">
+                      View example
+                    </a>
                   </td>
-                  <td>/users/[_id]/towatch</td>
-                  <td>POST</td>
+                  <td>
+                    A JSON object holding data about the user that was updated,
+                    containing name, lastName, birthday, country, email,
+                    username, password, favoriteMovies and toWatchMovies.
+                    <a href="examples/response13.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">14</th>
+                  <td>Allow existing users to deregister by username.</td>
+                  <td>/users/:username</td>
+                  <td>DELETE</td>
                   <td>None</td>
                   <td>
-                    A text message indicating the name of the movie that was
-                    added to the "To Watch" list.
+                    A text message indicating the username of the user that was
+                    removed from the database, or a text message indicating that
+                    the username was not found in the database.
+                    <a href="examples/response14.txt" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">15</th>
+                  <td>
+                    Allow users to add a movie to their "Favorites" list by
+                    movie ID.
+                  </td>
+                  <td>/users/:username/favorites/:movie_id</td>
+                  <td>POST</td>
+                  <td>
+                    A JSON object holding data about the movie to be added,
+                    containing the _id of the movie.
+                    <a href="examples/response15.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                  <td>
+                    A JSON object containing data about the updated user's
+                    "Favorites" list, containing the current IDs of the movies
+                    from the list.
+                    <a href="examples/response15.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">16</th>
+                  <td>
+                    Allow users to remove a movie from their "Favorites" list by
+                    movie ID.
+                  </td>
+                  <td>/users/:username/favorites/:movie_id</td>
+                  <td>DELETE</td>
+                  <td>None</td>
+                  <td>
+                    A JSON object containing data about the updated user's
+                    "Favorites" list, containing the current IDs of the movies
+                    from the list.
+                    <a href="examples/response16.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">17</th>
+                  <td>
+                    Allow users to add a movie to their "To Watch" list by movie
+                    ID.
+                  </td>
+                  <td>/users/:username/towatch/:movie_id</td>
+                  <td>POST</td>
+                  <td>
+                    A JSON object holding data about the movie to be added,
+                    containing the _id of the movie.
+                    <a href="examples/response17.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                  <td>
+                    A JSON object containing data about the updated user's "To
+                    Watch" list, containing the current IDs of the movies from
+                    the list.
+                    <a href="examples/response17.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">18</th>
+                  <td>
+                    Allow users to remove a movie from their "To Watch" list by
+                    movie ID.
+                  </td>
+                  <td>/users/:username/towatch/:movie_id</td>
+                  <td>DELETE</td>
+                  <td>None</td>
+                  <td>
+                    A JSON object containing data about the updated user's "To
+                    Watch" list, containing the current IDs of the movies from
+                    the list.
+                    <a href="examples/response18.json" target="_blank">
+                      View example
+                    </a>
                   </td>
                 </tr>
               </tbody>
@@ -307,7 +454,7 @@
           <a
             href="https://github.com/gregoriodelasheras/myVHS/releases/latest"
             target="_blank"
-            >v.1.0.3</a
+            >v.1.1.0</a
           >
         </p>
       </div>

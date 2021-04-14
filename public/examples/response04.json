@@ -1,0 +1,67 @@
+[
+  {
+    "_id": "6074aad84143dcecc5e180b7",
+    "name": "Action",
+    "description": "Movies in the action genre are fast-paced and include a lot of action like fight scenes, chase scenes, and slow-motion shots. They can feature superheroes, martial arts, or exciting stunts. These high-octane films are more about the execution of the plot rather than the plot itself. Action movies are meant to be thrilling to watch and leave audience members on the edge of their seats."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180b8",
+    "name": "Adventure",
+    "description": "The adventure genre is so similar to the action genre that adventure films are often categorized as action/adventure movies. Films in the adventure genre usually contain the same basic genre elements of an action movie with the setting as the key difference. Adventure movies are usually set in an exotic, far away, or unfamiliar locale."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180b9",
+    "name": "Comedy",
+    "description": "Comedy films are funny and entertaining. The films in this genre center around a comedic premise—usually putting someone in a challenging, amusing, or humorous situation they’re not prepared to handle. Good comedy movies are less about making constant jokes, and more about presenting a universally relatable, real-life story with complex characters who learn an important lesson."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180ba",
+    "name": "Drama",
+    "description": "The drama genre features stories with high stakes and a lot of conflicts. They’re plot-driven and demand that every character and scene move the story forward. Dramas follow a clearly defined narrative plot structure, portraying real-life scenarios or extreme situations with emotionally-driven characters."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180bb",
+    "name": "Fantasy",
+    "description": "Films in the fantasy genre feature magical and supernatural elements that do not exist in the real world. Although some films juxtapose a real-world setting with fantastical elements, many create entirely imaginary universes with their own laws, logic, and populations of imaginary races and creatures. Like science fiction films, fantasy films are speculative but are not tied to reality or scientific fact."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180bc",
+    "name": "Horror",
+    "description": "Horror films feature elements that leave people with an overwhelming sense of fear and dread. Horror movies often include serial killers or monsters as persistent, evil antagonists to play on viewers’ fears or nightmares. Audiences who love the horror genre seek out these movies specifically for the adrenaline rush produced by ghosts, gore, monsters, and jump-scares."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180bd",
+    "name": "Musicals",
+    "description": "Musical films weave songs or musical numbers into the narrative to progress the story or further develop the characters. Musicals are often tied to romance films but are not limited to that genre. Musical movies involve big stage-like productions, integrating important premise or character elements into the sequences."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180be",
+    "name": "Mystery",
+    "description": "Mystery films are all about the puzzle, and often feature a detective or amateur sleuth who is trying to solve it. Mystery films are full of suspense, and the protagonist searches for clues or evidence throughout the movie, piecing together events and interviewing suspects to solve the central question."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180bf",
+    "name": "Romance",
+    "description": "Romance films are love stories. They center around two protagonists exploring some of the elements of love like relationships, sacrifice, marriage, obsession, or destruction. Romance movies sometimes feature hardships like illness, infidelity, tragedy, or other obstacles for the love interests to overcome."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180c0",
+    "name": "Science fiction",
+    "description": "The sci-fi genre builds worlds and alternate realities filled with imagined elements that don’t exist in the real world. Science fiction spans a wide range of themes that often explore time travel, space travel, are set in the future, and deal with the consequences of technological and scientific advances. Sci-fi movies typically involve meticulous world-building with a strong attention to detail in order for the audience to believe the story and universe."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180c1",
+    "name": "Sports",
+    "description": "Movies in the sports genre will center around a team, individual player, or fan, with the sport itself used to motivate the plot and keep the story advancing. These movies aren’t fully focused on the sport itself, however, mainly using it as a backdrop to provide context into the emotional arcs of the main characters. Sports movies can be dramatic or comical, and are often meant to be allegorical."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180c2",
+    "name": "Thriller",
+    "description": "Thrillers expertly blend mystery, tension, and anticipation into one exciting story. Successful thrillers are well-paced, often introducing red herrings, divulging plot twists, and revealing information at the exact right moments to keep the audience intrigued. Thrillers often include a “ticking clock” aspect, where the stakes are set against a finite amount of time."
+  },
+  {
+    "_id": "6074aad84143dcecc5e180c3",
+    "name": "Western",
+    "description": "Westerns tell the tale of a cowboy or gunslinger pursuing an outlaw in the Wild West. The main character is often seeking revenge and will face off with the criminal in a duel or shootout at the end. Westerns are vivid productions set in the American West—such as the desert, mountains, or plains—that can inspire and inform the characters and the action."
+  }
+]
