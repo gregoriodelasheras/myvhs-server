@@ -51,8 +51,7 @@ Key Features:
 
 ## Built With
 
-- [MongoDB](https://www.mongodb.com/)
-- [Mongoose](https://mongoosejs.com/)
+- [MongoDB](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/)
 - [Express](https://expressjs.com/)
 - [React](https://reactjs.org/)
 - [Node.js](https://nodejs.org/)
