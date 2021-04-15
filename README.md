@@ -35,19 +35,16 @@ User Stories:
 - As a user, I want to be able to create a profile so I can save data about my favorite movies.
 
 Key Features: 
-- Return a list of all the movies of the 80's to the user.
-- Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user.
-- Return data about a genre (description) by name/title (e.g., “Thriller”).
-- Return data about a director (bio, birth year, death year) by name.
+- Return a list of movies of the 80's to the user.
+- Return data about a single movie by title to the user.
+- Return data about movie genres to the user.
+- Return data about directors and actors to the user.
 - Allow new users to register.
-- Allow users to update their user info (username, password, email, date of birth).
-- Allow users to add a movie to their list of favorites.
-- Allow users to remove a movie from their list of favorites.
-- Allow existing users to deregister.
-- Allow users to see which actors star in which movies.
-- Allow users to view information about different actors.
-- Allow users to view more information about different movies, such as the release date and the movie rating.
-- Allow users to create a “To Watch” list in addition to their “Favorite Movies” list.
+- Allow users to update their data by username.
+- Allow existing users to deregister by username.
+- Allow users to add and remove movies to their "Favorites" list by movie ID.
+- Allow users to add and remove movies to their "To Watch" list by movie ID.
+- Secure access to the API data: authentication and authorization with HTTP and JSON Web Token.
 
 ## Built With
 
@@ -55,6 +52,7 @@ Key Features:
 - [Express](https://expressjs.com/)
 - [React](https://reactjs.org/)
 - [Node.js](https://nodejs.org/)
+- [Passport](https://github.com/jaredhanson/passport)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
