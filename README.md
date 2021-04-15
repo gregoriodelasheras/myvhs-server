@@ -24,7 +24,7 @@
 ## About The Project
 
 <p align="center">
-  <img src="img/screenshot-app.png" alt="App Screenshot">
+  <img src="https://www.retro-synthwave.com/wp-content/uploads/2016/10/design-00.jpg" alt="80s">
 </p>
 
 Objective:
@@ -49,6 +49,9 @@ Key Features:
 - Allow users to add and remove movies to their "Favorites" list by movie ID.
 - Allow users to add and remove movies to their "To Watch" list by movie ID.
 - Secure access to the API data: authentication and authorization with HTTP and JSON Web Token.
+
+Documentation
+- To read the API documentation, please follow [this link](https://gregoriodelasheras.github.io/myVHS/public/documentation).
 
 ## Built With
 
