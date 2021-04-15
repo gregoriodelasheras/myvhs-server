@@ -28,11 +28,15 @@
 </p>
 
 Objective:
-- Build a web application provides users with access to information about different movies, directors and genres released during the 1980s. Users are able to register, update their personal information and create a list of their favorite movies.
+- Build a web application that provides users with access to information about different movies, genres, directors and actors of the 1980s. Users are able to register, update their personal information, deregister and create a list of "Favorites" and "To Watch" movies.
 
 User Stories:
-- As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
+- As a user, I want to be able to receive information on movies, genres, directors and actors of the 1980s so that I can learn more about movies I’ve watched or am interested in.
+- As a user, I want to have a "Favorites" list and a "To Watch" list, and add and remove movies from them.
+- As a user, I want to access a simple web application with a minimalist interface, displaying only essential information.
 - As a user, I want to be able to create a profile so I can save data about my favorite movies.
+- As a user, I want to be able to update my personal data.
+- As a user, I want to be able to deregister my profile from the web application database.
 
 Key Features: 
 - Return a list of movies of the 80's to the user.
