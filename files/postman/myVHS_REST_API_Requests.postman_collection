@@ -9,6 +9,16 @@
 		{
 			"name": "Endpoint 01: Return a list of all movies to the user.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4NjkzLCJleHAiOjE2MTkxMjM0OTMsInN1YiI6ImFkbWluIn0.n4YeHKFW44wGpVaMhH5x7CqhDwsOakFSO7z97GTvGJ4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -28,6 +38,16 @@
 		{
 			"name": "Endpoint 02: Return data about a single movie by title to the user.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -54,6 +74,16 @@
 		{
 			"name": "Endpoint 03: Return a list of the cast of a movie by title to the user.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -82,6 +112,16 @@
 		{
 			"name": "Endpoint 04: Return a list of all movie genres to the user.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -102,6 +142,16 @@
 		{
 			"name": "Endpoint 05: Return data about a movie genre by name.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -129,6 +179,16 @@
 		{
 			"name": "Endpoint 06: Return a list of all directors to the user.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -149,6 +209,16 @@
 		{
 			"name": "Endpoint 07: Return data about a director by name.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -176,6 +246,16 @@
 		{
 			"name": "Endpoint 08: Return a list of all actors to the user.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -196,6 +276,16 @@
 		{
 			"name": "Endpoint 09: Return data about an actor by name.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -223,6 +313,16 @@
 		{
 			"name": "Endpoint 10: Allow an Admin to view all registered users in the database.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -243,6 +343,16 @@
 		{
 			"name": "Endpoint 11: Allow an Admin to view a registered user in the database by username.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -274,7 +384,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Test Name\",\r\n    \"lastName\": \"Test Lastname\",\r\n    \"birthday\": \"1900-01-01\",\r\n    \"country\": \"Testland\",\r\n    \"email\": \"test@testmail.com\",\r\n    \"username\": \"test\",\r\n    \"password\": \"testpassword\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"lastName\": \"DB\",\r\n    \"birthday\": \"2000-01-01\",\r\n    \"country\": \"Internet\",\r\n    \"email\": \"admin@admin.com\",\r\n    \"username\": \"admin\",\r\n    \"password\": \"3Ha9SJoQ^uzh$x*$^ot9zJBiGoE939\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -299,6 +409,16 @@
 		{
 			"name": "Endpoint 13: Allow users to update their data by username.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PUT",
 				"header": [],
 				"body": {
@@ -335,6 +455,16 @@
 		{
 			"name": "Endpoint 14: Allow existing users to deregister by username.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
@@ -362,6 +492,16 @@
 		{
 			"name": "Endpoint 15: Allow users to add a movie to their \"Favorites\" list by movie ID.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -404,6 +544,16 @@
 		{
 			"name": "Endpoint 16: Allow users to remove a movie from their \"Favorites\" list by movie ID.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
@@ -437,6 +587,16 @@
 		{
 			"name": "Endpoint 17: Allow users to add a movie to their \"To Watch\" list by movie ID.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"url": {
@@ -470,6 +630,16 @@
 		{
 			"name": "Endpoint 18: Allow users to remove a movie from their \"To Watch\" list by movie ID.",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
@@ -493,6 +663,46 @@
 						{
 							"key": "movie_id",
 							"value": ""
+						}
+					]
+				},
+				"description": "Examples:\n\n- \"Amadeus\"\n- \"Back%20to%20the%20Future\"\n- \"Blade%20Runner\"\n- Etc."
+			},
+			"response": []
+		},
+		{
+			"name": "Endpoint 19: Allow users to log in the website.",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmYXZvcml0ZU1vdmllcyI6W10sInRvV2F0Y2hNb3ZpZXMiOltdLCJfaWQiOiI2MDc4YTE5ZTc5MDhkOTI5OWNjY2JhNTkiLCJuYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkRCIiwiYmlydGhkYXkiOiIyMDAwLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJjb3VudHJ5IjoiSW50ZXJuZXQiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4iLCJwYXNzd29yZCI6IjNIYTlTSm9RXnV6aCR4KiReb3Q5ekpCaUdvRTkzOSIsIl9fdiI6MCwiaWF0IjoxNjE4NTE4ODU3LCJleHAiOjE2MTkxMjM2NTcsInN1YiI6ImFkbWluIn0.7j4vGCAgJU0FekPYDmHMKqCG9-vK8jTV7Rfd7vZ2dpg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/login?username=admin&password=3Ha9SJoQ^uzh$x*$^ot9zJBiGoE939",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "3Ha9SJoQ^uzh$x*$^ot9zJBiGoE939"
 						}
 					]
 				},
