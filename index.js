@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
+const { check, validationResult } = require('express-validator');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const models = require('./models.js');
@@ -213,48 +214,74 @@ app.get(
 );
 
 // Endpoint 12: Allow new users to register.
-app.post('/users', (req, res) => {
-  const hashedPassword = users.hashPassword(req.body.Password);
-  users
-    .findOne({ username: req.body.username })
-    .then((user) => {
-      if (user) {
-        return res
-          .status(400)
-          .send(
-            `Apologies, the username "${req.body.username}" has already been taken.`,
-          );
-      }
-      users
-        .create({
-          name: req.body.name,
-          lastName: req.body.lastName,
-          birthday: req.body.birthday,
-          country: req.body.country,
-          email: req.body.email,
-          username: req.body.username,
-          password: hashedPassword,
-        })
-        .then((userQueried) => {
-          res.status(201).json(userQueried);
-        })
-        .catch((err) => {
-          console.error(err);
-          res.status(500).send(`Error: ${err}`);
-        });
-      return true;
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).send(`Error: ${err}`);
-    });
-});
+app.post('/users',
+  [
+    check('name', 'Apologies, name is required.').not().isEmpty(),
+    check('lastName', 'Apologies, last name is required.').not().isEmpty(),
+    check('username', 'Apologies, the username requires a minimum of 6 characters.').isLength({ min: 6 }),
+    check('username', 'Apologies, the username only allows alphanumeric characters.').isAlphanumeric(),
+    check('email', 'Apologies, the entered email does not seem to be valid').isEmail(),
+    check('password', 'Apologies, the password requires a minimum of 8 characters.').isLength({ min: 8 }),
+    // eslint-disable-next-line consistent-return
+  ], (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(422).json({ errors: errors.array() });
+    }
+    const hashedPassword = users.hashPassword(req.body.Password);
+    users
+      .findOne({ username: req.body.username })
+      .then((user) => {
+        if (user) {
+          return res
+            .status(400)
+            .send(
+              `Apologies, the username "${req.body.username}" has already been taken.`,
+            );
+        }
+        users
+          .create({
+            name: req.body.name,
+            lastName: req.body.lastName,
+            birthday: req.body.birthday,
+            country: req.body.country,
+            email: req.body.email,
+            username: req.body.username,
+            password: hashedPassword,
+          })
+          .then((userQueried) => {
+            res.status(201).json(userQueried);
+          })
+          .catch((err) => {
+            console.error(err);
+            res.status(500).send(`Error: ${err}`);
+          });
+        return true;
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send(`Error: ${err}`);
+      });
+  });
 
 // Endpoint 13: Allow users to update their data by username.
 app.put(
   '/users/:username',
+  [
+    check('name', 'Apologies, name is required.').not().isEmpty(),
+    check('lastName', 'Apologies, last name is required.').not().isEmpty(),
+    check('username', 'Apologies, the username requires a minimum of 6 characters.').isLength({ min: 6 }),
+    check('username', 'Apologies, the username only allows alphanumeric characters.').isAlphanumeric(),
+    check('email', 'Apologies, the entered email does not seem to be valid').isEmail(),
+    check('password', 'Apologies, the password requires a minimum of 8 characters.').isLength({ min: 8 }),
+  ],
   passport.authenticate('jwt', { session: false }),
+  // eslint-disable-next-line consistent-return
   (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(422).json({ errors: errors.array() });
+    }
     const hashedPassword = users.hashPassword(req.body.Password);
     users
       .findOneAndUpdate(
