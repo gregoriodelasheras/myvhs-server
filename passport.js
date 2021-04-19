@@ -16,17 +16,17 @@ passport.use(
     },
     (usernamePassport, passwordPassport, callback) => {
       users.findOne(
-        { username: usernamePassport, password: passwordPassport },
+        { username: usernamePassport },
         (err, user) => {
           if (err) {
             console.error(err);
             return callback(err);
           }
           if (!user) {
-            return callback(null, false, {
-              message:
-                'Oops! Incorrect username or password. Please try again.',
-            });
+            return callback(null, false, { message: 'Oops! Incorrect username. Please try again.' });
+          }
+          if (!user.validatePassword(passwordPassport)) {
+            return callback(null, false, { message: 'Oops! Incorrect password. Please try again.' });
           }
           return callback(null, user);
         },

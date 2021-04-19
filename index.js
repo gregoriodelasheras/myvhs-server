@@ -214,6 +214,7 @@ app.get(
 
 // Endpoint 12: Allow new users to register.
 app.post('/users', (req, res) => {
+  const hashedPassword = users.hashPassword(req.body.Password);
   users
     .findOne({ username: req.body.username })
     .then((user) => {
@@ -232,7 +233,7 @@ app.post('/users', (req, res) => {
           country: req.body.country,
           email: req.body.email,
           username: req.body.username,
-          password: req.body.password,
+          password: hashedPassword,
         })
         .then((userQueried) => {
           res.status(201).json(userQueried);
@@ -254,6 +255,7 @@ app.put(
   '/users/:username',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
+    const hashedPassword = users.hashPassword(req.body.Password);
     users
       .findOneAndUpdate(
         { username: req.params.username },
@@ -265,7 +267,7 @@ app.put(
             country: req.body.country,
             email: req.body.email,
             username: req.body.username,
-            password: req.body.password,
+            password: hashedPassword,
           },
         },
         { new: true },
