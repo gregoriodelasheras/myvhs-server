@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const models = require('./models.js');
@@ -409,6 +410,20 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Oops! Something went wrong. Please try again later.');
 });
+
+// CORS
+const allowedOrigins = ['http://localhost:8080', ''];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const message = `The CORS policy for this application doesn't allow access from origin ${origin}`;
+      return callback(new Error(message), false);
+    }
+    return callback(null, true);
+  },
+}));
 
 // Listen for requests
 app.listen(8080, () => {
