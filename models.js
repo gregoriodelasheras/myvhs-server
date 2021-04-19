@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 // Movies Mongoose Schema
 const movieSchema = mongoose.Schema({
@@ -48,6 +49,13 @@ const userSchema = mongoose.Schema({
   favoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'movies' }],
   toWatchMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'movies' }],
 });
+
+// CORS
+userSchema.statics.hashPassword = (password) => bcrypt.hashSync(password, 10);
+
+userSchema.methods.validatePassword = function validatePassword(password) {
+  return bcrypt.compareSync(password, this.Password);
+};
 
 const movie = mongoose.model('movie', movieSchema);
 const genre = mongoose.model('genre', genreSchema);
