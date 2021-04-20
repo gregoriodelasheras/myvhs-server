@@ -32,6 +32,13 @@ mongoose.connect(process.env.CONNECTION_URI, {
   useUnifiedTopology: true,
 });
 
+// Endpoint 0: Welcome message to the user
+app.get('/', (req, res) => {
+  res.send(
+    'Hi and welcome to myVHS! Get comfy, grab your favorite snacks and get ready for an exciting trip right back to the mind-blowing decade of the 80\'s!',
+  );
+});
+
 // Endpoint 01: Return a list of all movies to the user.
 app.get(
   '/movies',
