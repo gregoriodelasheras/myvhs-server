@@ -21,7 +21,13 @@ const directors = models.director;
 const actors = models.actor;
 const users = models.user;
 mongoose.set('useFindAndModify', false);
+/*
 mongoose.connect('mongodb://localhost:27017/myVHS', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+*/
+mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
