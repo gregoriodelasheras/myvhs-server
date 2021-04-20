@@ -22,16 +22,16 @@ const actors = models.actor;
 const users = models.user;
 mongoose.set('useFindAndModify', false);
 
+/*
 mongoose.connect('mongodb://localhost:27017/myVHS', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-/*
+*/
 mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-*/
 
 // Endpoint 0: Welcome message to the user
 app.get('/', (req, res) => {
@@ -455,7 +455,7 @@ app.use((err, req, res, next) => {
 });
 
 // CORS
-const allowedOrigins = ['http://localhost:8080', ''];
+const allowedOrigins = ['http://localhost:8080', 'https://cloud.mongodb.com/', 'https://www.heroku.com/'];
 
 app.use(cors({
   origin: (origin, callback) => {
