@@ -17,7 +17,7 @@ module.exports = (router) => {
     passport.authenticate('local', { session: false }, (err, user) => {
       if (err || !user) {
         return res.status(400).json({
-          message: 'Oops! Something went wrong. Please try again.',
+          message: 'Oops! Username or password wrong. Please try again.',
           user,
         });
       }
