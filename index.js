@@ -21,16 +21,17 @@ const directors = models.director;
 const actors = models.actor;
 const users = models.user;
 mongoose.set('useFindAndModify', false);
-/*
+
 mongoose.connect('mongodb://localhost:27017/myVHS', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-*/
+/*
 mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+*/
 
 // Endpoint 0: Welcome message to the user
 app.get('/', (req, res) => {
@@ -241,7 +242,7 @@ app.post('/users',
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
     }
-    const hashedPassword = users.hashPassword(req.body.Password);
+    const hashedPassword = users.hashPassword(req.body.password);
     users
       .findOne({ username: req.body.username })
       .then((user) => {
