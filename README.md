@@ -73,7 +73,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Francisco Gregorio de las Heras - [@herasdev](https://twitter.com/herasdev)
 
-Project Link: [https://gregoriodelasheras.github.io/myVHS/](https://gregoriodelasheras.github.io/myVHS/)
+Project Link: [https://myvhs.herokuapp.com/](https://myvhs.herokuapp.com/)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
