@@ -33,7 +33,7 @@
           alt="Logo myVHS"
           class="img-fluid w-50 m-3"
         />
-        <h1 class="text-center">Documentation</h1>
+        <h1 class="text-center">Documentation (v.1.1.2)</h1>
       </div>
     </header>
     <main>
@@ -88,20 +88,35 @@
           </ul>
         </div>
         <div class="my-5">
-          <h2>Built With</h2>
+          <h2>Built With:</h2>
           <ul>
             <li>MongoDB</li>
-            <li>Mongoose</li>
             <li>Express</li>
             <li>React</li>
             <li>Node.js</li>
             <li>Visual Studio Code</li>
-            <li>Prettier</li>
-            <li>ESLint</li>
           </ul>
         </div>
         <div class="my-5">
-          <h2>Endpoints Design</h2>
+          <h2>Dependencies:</h2>
+          <ul>
+            <li>bcrypt</li>
+            <li>body-parser</li>
+            <li>cors</li>
+            <li>dotenv</li>
+            <li>eslint</li>
+            <li>express</li>
+            <li>express-validator</li>
+            <li>jsonwebtoken</li>
+            <li>mongoose</li>
+            <li>morgan</li>
+            <li>passport</li>
+            <li>passport-jwt</li>
+            <li>passport-local</li>
+          </ul>
+        </div>
+        <div class="my-5">
+          <h2>Endpoints Design:</h2>
           <div class="table-responsive">
             <table class="table table-hover align-middle">
               <thead>
@@ -115,6 +130,20 @@
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <th scope="row">00</th>
+                  <td>Display a welcome message to the user</td>
+                  <td>/</td>
+                  <td>GET</td>
+                  <td>None</td>
+                  <td>
+                    A text message that welcomes the user when entering the main
+                    page of the application.
+                    <a href="examples/response00.txt" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
                 <tr>
                   <th scope="row">01</th>
                   <td>Return a list of all movies to the user.</td>
@@ -257,8 +286,8 @@
                   <td>None</td>
                   <td>
                     A JSON object holding data about all the users, containing
-                    name, lastName, birthday, country, email, username,
-                    password, favoriteMovies and toWatchMovies.
+                    name, lastName, birthday, country, email, username, password
+                    (hashed), favoriteMovies and toWatchMovies.
                     <a href="examples/response10.json" target="_blank">
                       View example
                     </a>
@@ -276,7 +305,8 @@
                   <td>
                     A JSON object holding data about the user queried,
                     containing name, lastName, birthday, country, email,
-                    username, password, favoriteMovies and toWatchMovies.
+                    username, password (hashed), favoriteMovies and
+                    toWatchMovies.
                     <a href="examples/response11.json" target="_blank">
                       View example
                     </a>
@@ -289,8 +319,8 @@
                   <td>POST</td>
                   <td>
                     A JSON object holding data about the user to add, containing
-                    name, lastName, birthday, country, email, username,
-                    password, favoriteMovies and toWatchMovies.
+                    name, lastName, birthday, country, email, username, password
+                    (hashed), favoriteMovies and toWatchMovies.
                     <a href="examples/response12.json" target="_blank">
                       View example
                     </a>
@@ -298,7 +328,8 @@
                   <td>
                     A JSON object holding data about the user that was added,
                     containing name, lastName, birthday, country, email,
-                    username, password, favoriteMovies and toWatchMovies.
+                    username, password (hashed), favoriteMovies and
+                    toWatchMovies.
                     <a href="examples/response12.json" target="_blank">
                       View example
                     </a>
@@ -312,7 +343,8 @@
                   <td>
                     A JSON object holding data about the user to update,
                     containing name, lastName, birthday, country, email,
-                    username, password, favoriteMovies and toWatchMovies.
+                    username, password (hashed), favoriteMovies and
+                    toWatchMovies.
                     <a href="examples/response13.json" target="_blank">
                       View example
                     </a>
@@ -320,7 +352,8 @@
                   <td>
                     A JSON object holding data about the user that was updated,
                     containing name, lastName, birthday, country, email,
-                    username, password, favoriteMovies and toWatchMovies.
+                    username, password (hashed), favoriteMovies and
+                    toWatchMovies.
                     <a href="examples/response13.json" target="_blank">
                       View example
                     </a>
@@ -425,12 +458,44 @@
                     </a>
                   </td>
                 </tr>
+                <tr>
+                  <th scope="row">19</th>
+                  <td>
+                    Allows a user to login to the application with their
+                    username and password (hashed), and automatically generates
+                    a JWT for the user.
+                  </td>
+                  <td>/login</td>
+                  <td>POST</td>
+                  <td>None</td>
+                  <td>
+                    A JSON object holding data about the user logged into the
+                    application, containing name, lastName, birthday, country,
+                    email, username, password (hashed), favoriteMovies and
+                    toWatchMovies.
+                    <a href="examples/response19.json" target="_blank">
+                      View example
+                    </a>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
         </div>
         <div class="my-5">
-          <h2>License</h2>
+          <h2>Testing environment:</h2>
+          <p>
+            The API endpoints have been tested through Postman. If you wish to
+            test them, you can download the backup of the test environment used.
+            Download the
+            <a
+              href="../files/postman/myVHS-REST-API-Requests-(heroku-app).postman_collection"
+              >exported file here</a
+            >.
+          </p>
+        </div>
+        <div class="my-5">
+          <h2>License:</h2>
           <p>
             Distributed under the
             <a
@@ -454,7 +519,7 @@
           <a
             href="https://github.com/gregoriodelasheras/myVHS/releases/latest"
             target="_blank"
-            >v.1.1.0</a
+            >v.1.1.2</a
           >
         </p>
       </div>

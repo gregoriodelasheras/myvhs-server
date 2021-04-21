@@ -1,0 +1,16 @@
+{
+    "user": {
+        "favoriteMovies": [],
+        "toWatchMovies": [],
+        "_id": "608047bc2056cb0015fe9b0a",
+        "name": "Admin",
+        "lastName": "DB",
+        "birthday": "2100-01-01T00:00:00.000Z",
+        "country": "Internet",
+        "email": "admin@admin.com",
+        "username": "admindb",
+        "password": "$2b$10$JhGpT7bTfLeyww/DwJBV5eZOae6d4MqlvFejrOkRB4zh7NOOSrHpy",
+        "__v": 0
+    },
+    "token": "<JWT>"
+}
