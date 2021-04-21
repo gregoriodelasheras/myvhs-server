@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "8a200ebe-2383-4b94-952b-521e832d2f22",
-		"name": "myVHS REST API Requests",
+		"_postman_id": "08ff85c6-fd35-4fc8-abaf-83bc706d28f2",
+		"name": "myVHS REST API Requests (heroku app)",
 		"description": "# myVHS REST API Requests\n\nAllows API testing using the 18 programmed endpoints.\n\nAuthor: Francisco Gregorio de las Heras\n\nLast update: 2021-04-14",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Endpoint 01: Return a list of all movies to the user.",
+			"name": "Endpoint 00: Welcome message to the user",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -22,12 +22,43 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/movies",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Endpoint 01: Return a list of all movies to the user. Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://myvhs.herokuapp.com/movies",
+					"protocol": "https",
+					"host": [
+						"myvhs",
+						"herokuapp",
+						"com"
+					],
 					"path": [
 						"movies"
 					]
@@ -51,12 +82,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/movies/:title",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/movies/:title",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"movies",
 						":title"
@@ -87,12 +119,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/movies/:title/cast",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/movies/:title/cast",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"movies",
 						":title",
@@ -125,12 +158,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/genres",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/genres",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"genres"
 					]
@@ -155,12 +189,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/genres/:name",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/genres/:name",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"genres",
 						":name"
@@ -192,12 +227,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/directors",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/directors",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"directors"
 					]
@@ -222,12 +258,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/directors/:name",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/directors/:name",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"directors",
 						":name"
@@ -259,12 +296,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/actors",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/actors",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"actors"
 					]
@@ -289,12 +327,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/actors/:name",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/actors/:name",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"actors",
 						":name"
@@ -326,12 +365,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users"
 					]
@@ -356,12 +396,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/:username",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users/:username",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users",
 						":username"
@@ -384,7 +425,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"lastName\": \"DB\",\r\n    \"birthday\": \"2000-01-01\",\r\n    \"country\": \"Internet\",\r\n    \"email\": \"admin@admin.com\",\r\n    \"username\": \"admin\",\r\n    \"password\": \"4w74yg5@^x*DZ@aK*5&XZt%7yD8&sD\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"lastName\": \"DB\",\r\n    \"birthday\": \"2100-01-01\",\r\n    \"country\": \"Internet\",\r\n    \"email\": \"admin@admin.com\",\r\n    \"username\": \"admindb\",\r\n    \"password\": \"123456789\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -392,12 +433,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/users",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users"
 					]
@@ -423,7 +465,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Test Name\",\r\n    \"lastName\": \"Test Lastname\",\r\n    \"birthday\": \"1900-01-01\",\r\n    \"country\": \"Testland\",\r\n    \"email\": \"newtest@testmail.com\",\r\n    \"username\": \"test\",\r\n    \"password\": \"newtestpassword\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"lastName\": \"DB\",\r\n    \"birthday\": \"2100-01-01\",\r\n    \"country\": \"Internet\",\r\n    \"email\": \"new.email@admin.com\",\r\n    \"username\": \"admindb\",\r\n    \"password\": \"987654321\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -431,12 +473,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/users/:username",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users/:username",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users",
 						":username"
@@ -468,12 +511,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/:username",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users/:username",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users",
 						":username"
@@ -514,12 +558,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/users/:username/favorites/:movie_id",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users/:username/favorites/:movie_id",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users",
 						":username",
@@ -557,12 +602,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/:username/favorites/:movie_id",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users/:username/favorites/:movie_id",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users",
 						":username",
@@ -600,12 +646,13 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/:username/towatch/:movie_id",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users/:username/towatch/:movie_id",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users",
 						":username",
@@ -643,12 +690,13 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/:username/towatch/:movie_id",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/users/:username/towatch/:movie_id",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"users",
 						":username",
@@ -686,23 +734,24 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/login?username=admin&password=4w74yg5@^x*DZ@aK*5%26XZt%7yD8%26sD",
-					"protocol": "http",
+					"raw": "https://myvhs.herokuapp.com/login?username=admindb&password=123456789",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"myvhs",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"login"
 					],
 					"query": [
 						{
 							"key": "username",
-							"value": "admin"
+							"value": "admindb"
 						},
 						{
 							"key": "password",
-							"value": "4w74yg5@^x*DZ@aK*5%26XZt%7yD8%26sD"
+							"value": "123456789"
 						}
 					]
 				},
