@@ -24,7 +24,7 @@
 ## About The Project
 
 <p align="center">
-  <img src="https://www.retro-synthwave.com/wp-content/uploads/2016/10/design-00.jpg" alt="80s">
+  <img src="https://www.retro-synthwave.com/wp-content/uploads/2016/10/design-00.jpg" alt="80s" width="600">
 </p>
 
 Objective:
@@ -55,14 +55,28 @@ Documentation
 
 ## Built With
 
-- [MongoDB](https://www.mongodb.com/) + [Mongoose](https://mongoosejs.com/)
+- [MongoDB](https://www.mongodb.com/)
 - [Express](https://expressjs.com/)
 - [React](https://reactjs.org/)
 - [Node.js](https://nodejs.org/)
-- [Passport](https://github.com/jaredhanson/passport)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
+
+## Dependencies:
+
+- bcrypt
+-	body-parser
+-	cors
+-	dotenv
+-	eslint
+-	express
+-	express-validator
+-	jsonwebtoken
+-	mongoose
+-	morgan
+-	passport
+-	passport-jwt
+-	passport-local
+
 
 ## License
 
