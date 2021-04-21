@@ -24,16 +24,16 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# About The Project
 
 <p align="center">
   <img src="https://www.retro-synthwave.com/wp-content/uploads/2016/10/design-00.jpg" alt="80s" width="600">
 </p>
 
-Objective:
+## Objective:
 - Build a web application that provides users with access to information about different movies, genres, directors and actors of the 1980s. Users are able to register, update their personal information, deregister and create a list of "Favorites" and "To Watch" movies.
 
-User Stories:
+## User Stories:
 - As a user, I want to be able to receive information on movies, genres, directors and actors of the 1980s so that I can learn more about movies I’ve watched or am interested in.
 - As a user, I want to have a "Favorites" list and a "To Watch" list, and add and remove movies from them.
 - As a user, I want to access a simple web application with a minimalist interface, displaying only essential information.
@@ -41,7 +41,7 @@ User Stories:
 - As a user, I want to be able to update my personal data.
 - As a user, I want to be able to deregister my profile from the web application database.
 
-Key Features: 
+## Key Features: 
 - Return a list of movies of the 80's to the user.
 - Return data about a single movie by title to the user.
 - Return data about movie genres to the user.
@@ -53,7 +53,7 @@ Key Features:
 - Allow users to add and remove movies to their "To Watch" list by movie ID.
 - Secure access to the API data: authentication and authorization with HTTP and JSON Web Token.
 
-## Built With
+# Built With
 
 - [MongoDB](https://www.mongodb.com/)
 - [Express](https://expressjs.com/)
@@ -61,7 +61,7 @@ Key Features:
 - [Node.js](https://nodejs.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
-## Dependencies
+# Dependencies
 
 - bcrypt
 -	body-parser
@@ -77,24 +77,24 @@ Key Features:
 -	passport-jwt
 -	passport-local
 
-## Endpoints Design
+# Endpoints Design
 
-## Documentation
+# Documentation
 To read the API documentation, please follow [this link](https://gregoriodelasheras.github.io/myVHS/public/documentation).
 
-## License
+# License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
-## Contact
+# Contact
 
 Francisco Gregorio de las Heras - [@herasdev](https://twitter.com/herasdev)
 
 Project Link: [https://myvhs.herokuapp.com/](https://myvhs.herokuapp.com/)
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
+# Acknowledgements
 
 * [Itua Akhator](https://github.com/iakhator)
 * [Vinh-Tuong Mai](https://github.com/mvtuong)
