@@ -296,7 +296,7 @@ app.put(
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
     }
-    const hashedPassword = users.hashPassword(req.body.Password);
+    const hashedPassword = users.hashPassword(req.body.password);
     users
       .findOneAndUpdate(
         { username: req.params.username },
