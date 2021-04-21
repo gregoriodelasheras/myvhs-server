@@ -15,6 +15,8 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#endpoints-design">Endpoints Design</a></li>
+    <li><a href="#documentation">Documentation</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -51,9 +53,6 @@ Key Features:
 - Allow users to add and remove movies to their "To Watch" list by movie ID.
 - Secure access to the API data: authentication and authorization with HTTP and JSON Web Token.
 
-Documentation
-- To read the API documentation, please follow [this link](https://gregoriodelasheras.github.io/myVHS/public/documentation).
-
 ## Built With
 
 - [MongoDB](https://www.mongodb.com/)
@@ -79,6 +78,9 @@ Documentation
 -	passport-local
 
 ## Endpoints Design
+
+## Documentation
+To read the API documentation, please follow [this link](https://gregoriodelasheras.github.io/myVHS/public/documentation).
 
 ## License
 
