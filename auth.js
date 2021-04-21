@@ -11,6 +11,7 @@ const generateJWTToken = (user) => jwt.sign(user, jwtSecret, {
   algorithm: 'HS256',
 });
 
+// Endpoint 19: Allow users to log in the website.
 module.exports = (router) => {
   router.post('/login', (req, res) => {
     // eslint-disable-next-line consistent-return
