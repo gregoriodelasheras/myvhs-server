@@ -20,12 +20,12 @@
   </ol>
 </details>
 
+<p align="center">
+  <img src="https://www.retro-synthwave.com/wp-content/uploads/2016/10/design-00.jpg" alt="80s" width="600">
+</p>
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<p align="center">
-  <img src="https://www.retro-synthwave.com/wp-content/uploads/2016/10/design-00.jpg" alt="80s">
-</p>
 
 Objective:
 - Build a web application that provides users with access to information about different movies, genres, directors and actors of the 1980s. Users are able to register, update their personal information, deregister and create a list of "Favorites" and "To Watch" movies.
