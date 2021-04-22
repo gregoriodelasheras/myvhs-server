@@ -58,10 +58,10 @@ The development of this application was organized through a Kanban board. You ca
 
 ## Built With
 
-- [MongoDB](https://www.mongodb.com/)
-- [Express](https://expressjs.com/)
-- [React](https://reactjs.org/)
+- [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Dependencies
