@@ -53,6 +53,9 @@
 - Allow users to add and remove movies to their "To Watch" list by movie ID.
 - Secure access to the API data: authentication and authorization with HTTP and JSON Web Token.
 
+### Kanban Board:
+The development of this application was organized through a Kanban board. You can see the board by [following this link](https://trello.com/b/6PPcluVZ/myvhs-server-side).
+
 ## Built With
 
 - [MongoDB](https://www.mongodb.com/)
