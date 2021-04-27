@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 // Endpoint 01: Return a list of all movies to the user.
 app.get(
   '/movies',
-  passport.authenticate('jwt', { session: false }),
+  // passport.authenticate('jwt', { session: false }),
   (req, res) => {
     movies
       .find()
