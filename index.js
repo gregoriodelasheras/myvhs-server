@@ -1,33 +1,45 @@
 /* eslint-disable no-console */
 const express = require('express');
+const { check, validationResult } = require('express-validator');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
-const { check, validationResult } = require('express-validator');
-const mongoose = require('mongoose');
+require('dotenv').config();
 const passport = require('passport');
+require('./passport');
+const mongoose = require('mongoose');
 const models = require('./models.js');
 
 const app = express();
+
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(morgan('common'));
+mongoose.Promise = global.Promise;
+mongoose.set('useFindAndModify', false);
 // eslint-disable-next-line no-unused-vars
-const auth = require('./auth')(app);
-require('./passport');
+// const auth = require('./auth')(app);
 
 const movies = models.movie;
 const genres = models.genre;
 const directors = models.director;
 const actors = models.actor;
 const users = models.user;
-mongoose.set('useFindAndModify', false);
 
-/*
-mongoose.connect('mongodb://localhost:27017/myVHS', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-*/
+// CORS
+const allowedOrigins = ['http://localhost:8080', 'http://localhost:1234', 'https://myvhs.herokuapp.com/'];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const message = `The CORS policy for this application doesn't allow access from origin ${origin}`;
+      return callback(new Error(message), false);
+    }
+    return callback(null, true);
+  },
+}));
+
 mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -444,9 +456,6 @@ app.delete(
   },
 );
 
-// Serving static files
-app.use(express.static('public'));
-
 // Error Handling
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
@@ -454,21 +463,7 @@ app.use((err, req, res, next) => {
   res.status(500).send('Oops! Something went wrong. Please try again later.');
 });
 
-// CORS
-const allowedOrigins = ['http://localhost:8080', 'https://cloud.mongodb.com/', 'https://www.heroku.com/'];
-
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const message = `The CORS policy for this application doesn't allow access from origin ${origin}`;
-      return callback(new Error(message), false);
-    }
-    return callback(null, true);
-  },
-}));
-
-// Listen for requests
+// Port Listener
 const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Listening on Port ${port}`);
