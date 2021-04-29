@@ -14,6 +14,7 @@ const generateJWTToken = (user) => jwt.sign(user, jwtSecret, {
 // Endpoint 19: Allow users to log in the website.
 module.exports = (router) => {
   router.post('/login', (req, res) => {
+    // eslint-disable-next-line consistent-return
     passport.authenticate('local', { session: false }, (err, user) => {
       if (err || !user) {
         return res.status(400).json({
