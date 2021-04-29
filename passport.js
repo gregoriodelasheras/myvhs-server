@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const passportJWT = require('passport-jwt');
@@ -42,8 +41,6 @@ passport.use(
       secretOrKey: 'your_jwt_secret',
     },
     (jwtPayload, callback) => users
-      // ("_id" MongoDB field)
-      // eslint-disable-next-line no-underscore-dangle
       .findById(jwtPayload._id)
       .then((user) => callback(null, user))
       .catch((err) => callback(err)),

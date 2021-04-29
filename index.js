@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const express = require('express');
 const { check, validationResult } = require('express-validator');
 const bodyParser = require('body-parser');
@@ -17,8 +16,7 @@ app.use(bodyParser.json());
 app.use(morgan('common'));
 mongoose.Promise = global.Promise;
 mongoose.set('useFindAndModify', false);
-// eslint-disable-next-line no-unused-vars
-// const auth = require('./auth')(app);
+const auth = require('./auth')(app);
 
 const movies = models.movie;
 const genres = models.genre;
@@ -55,7 +53,7 @@ app.get('/', (req, res) => {
 // Endpoint 01: Return a list of all movies to the user.
 app.get(
   '/movies',
-  // passport.authenticate('jwt', { session: false }),
+  passport.authenticate('jwt', { session: false }),
   (req, res) => {
     movies
       .find()
@@ -248,7 +246,6 @@ app.post('/users',
     check('username', 'Apologies, the username only allows alphanumeric characters.').isAlphanumeric(),
     check('email', 'Apologies, the entered email does not seem to be valid').isEmail(),
     check('password', 'Apologies, the password requires a minimum of 8 characters.').isLength({ min: 8 }),
-    // eslint-disable-next-line consistent-return
   ], (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -302,7 +299,6 @@ app.put(
     check('password', 'Apologies, the password requires a minimum of 8 characters.').isLength({ min: 8 }),
   ],
   passport.authenticate('jwt', { session: false }),
-  // eslint-disable-next-line consistent-return
   (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -457,7 +453,6 @@ app.delete(
 );
 
 // Error Handling
-// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Oops! Something went wrong. Please try again later.');
