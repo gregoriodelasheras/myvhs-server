@@ -71,11 +71,11 @@ app.get(
 
 // Endpoint 02: Return data about a single movie by title to the user.
 app.get(
-  '/movies/:title',
+  '/movies/:id',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     movies
-      .findOne({ title: req.params.title })
+      .findOne({ _id: req.params.id })
       .then((movieQueried) => {
         res.status(201).json(movieQueried);
       })
@@ -88,11 +88,11 @@ app.get(
 
 // Endpoint 03: Return a list of the cast of a movie by title to the user.
 app.get(
-  '/movies/:title/cast',
+  '/movies/:id/cast',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     movies
-      .findOne({ title: req.params.title })
+      .findOne({ _id: req.params.id })
       .then((movieQueried) => {
         res.status(201).json(movieQueried.actors);
       })
