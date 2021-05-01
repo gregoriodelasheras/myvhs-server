@@ -69,7 +69,7 @@ app.get(
   },
 );
 
-// Endpoint 02: Return data about a single movie by title to the user.
+// Endpoint 02: Return data about a single movie by ID to the user.
 app.get(
   '/movies/:id',
   passport.authenticate('jwt', { session: false }),
@@ -86,7 +86,7 @@ app.get(
   },
 );
 
-// Endpoint 03: Return a list of the cast of a movie by title to the user.
+// Endpoint 03: Return a list of the cast of a movie by ID to the user.
 app.get(
   '/movies/:id/cast',
   passport.authenticate('jwt', { session: false }),
@@ -120,13 +120,13 @@ app.get(
   },
 );
 
-// Endpoint 05: Return data about a movie genre by name.
+// Endpoint 05: Return data about a movie genre by ID.
 app.get(
-  '/genres/:name',
+  '/genres/:id',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     genres
-      .findOne({ name: req.params.name })
+      .findOne({ _id: req.params.id })
       .then((genreQueried) => {
         res.status(201).json(genreQueried);
       })
@@ -154,13 +154,13 @@ app.get(
   },
 );
 
-// Endpoint 07: Return data about a director by name.
+// Endpoint 07: Return data about a director by ID.
 app.get(
-  '/directors/:name',
+  '/directors/:id',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     directors
-      .findOne({ name: req.params.name })
+      .findOne({ _id: req.params.id })
       .then((directorQueried) => {
         res.status(201).json(directorQueried);
       })
@@ -188,13 +188,13 @@ app.get(
   },
 );
 
-// Endpoint 09: Return data about an actor by name.
+// Endpoint 09: Return data about an actor by ID.
 app.get(
-  '/actors/:name',
+  '/actors/:id',
   passport.authenticate('jwt', { session: false }),
   (req, res) => {
     actors
-      .findOne({ name: req.params.name })
+      .findOne({ _id: req.params.id })
       .then((actorQueried) => {
         res.status(201).json(actorQueried);
       })
