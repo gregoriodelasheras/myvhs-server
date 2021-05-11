@@ -15,10 +15,8 @@ const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(morgan('common'));
-mongoose.Promise = global.Promise;
 mongoose.set('useFindAndModify', false);
 // eslint-disable-next-line no-unused-vars
-const auth = require('./auth')(app);
 
 const movies = models.movie;
 const genres = models.genre;
@@ -40,10 +38,14 @@ app.use(cors({
   },
 }));
 
+mongoose.Promise = global.Promise;
+
 mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+require('./auth')(app);
 
 // Endpoint 0: Welcome message to the user
 app.get('/', (req, res) => {
