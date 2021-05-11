@@ -7,3 +7,6 @@
 # Node
 node_modules
 .env
+
+# Local
+.history
