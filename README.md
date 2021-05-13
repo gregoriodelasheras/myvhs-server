@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
   <a href="https://gregoriodelasheras.github.io/myVHS/">
-    <img src="img/logo-readme.svg" alt="Logo" width="600">
+    <img src="" alt="Logo" width="600">
   </a>
   <p align="center">
     Web App for enthusiasts of 80's movies. All in one VHS! Built with its own API and the MERN stack.
@@ -26,10 +26,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<p align="center">
-  <img src="https://www.retro-synthwave.com/wp-content/uploads/2016/10/design-00.jpg" alt="80s" width="600">
-</p>
 
 ### Objective:
 
@@ -464,6 +460,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
+
+Francisco Gregorio de las Heras: [LinkedIn](https://www.linkedin.com/in/francisco-gregorio-de-las-heras/)
 
 Project Link: [https://myvhs.herokuapp.com/](https://myvhs.herokuapp.com/)
 
