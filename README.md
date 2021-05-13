@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <a href="https://gregoriodelasheras.github.io/myVHS/">
+  <a href="https://myvhs.herokuapp.com/">
     <img src="img/logo.svg" alt="Logo" width="600">
   </a>
   <p align="center">
