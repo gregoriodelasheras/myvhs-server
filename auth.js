@@ -1,13 +1,10 @@
-require('dotenv').config();
-
-const jwtSecret = process.env.JWT_SECRET;
-
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
 
+require('dotenv').config();
 require('./passport');
 
-const generateJWTToken = (user) => jwt.sign(user, jwtSecret, {
+const generateJWTToken = (user) => jwt.sign(user, process.env.JWT_SECRET, {
   subject: user.username,
   expiresIn: '7d',
   algorithm: 'HS256',
