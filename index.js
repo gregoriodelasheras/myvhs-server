@@ -16,7 +16,6 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(morgan('common'));
 mongoose.set('useFindAndModify', false);
-// eslint-disable-next-line no-unused-vars
 
 const movies = models.movie;
 const genres = models.genre;
@@ -25,18 +24,24 @@ const actors = models.actor;
 const users = models.user;
 
 // CORS
-const allowedOrigins = ['http://localhost:8080', 'http://localhost:1234', 'https://myvhs.herokuapp.com/'];
+const allowedOrigins = [
+  'http://localhost:8080',
+  'http://localhost:1234',
+  'https://myvhs.herokuapp.com/',
+];
 
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const message = `The CORS policy for this application doesn't allow access from origin ${origin}`;
-      return callback(new Error(message), false);
-    }
-    return callback(null, true);
-  },
-}));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        const message = `The CORS policy for this application doesn't allow access from origin ${origin}`;
+        return callback(new Error(message), false);
+      }
+      return callback(null, true);
+    },
+  }),
+);
 
 mongoose.Promise = global.Promise;
 
@@ -50,7 +55,7 @@ require('./auth')(app);
 // Endpoint 0: Welcome message to the user
 app.get('/', (req, res) => {
   res.send(
-    'Hi and welcome to myVHS! Get comfy, grab your favorite snacks and get ready for an exciting trip right back to the mind-blowing decade of the 80\'s!',
+    "Hi and welcome to myVHS! Get comfy, grab your favorite snacks and get ready for an exciting trip right back to the mind-blowing decade of the 80's!",
   );
 });
 
@@ -242,16 +247,30 @@ app.get(
 );
 
 // Endpoint 12: Allow new users to register.
-app.post('/users',
+app.post(
+  '/users',
   [
     check('name', 'Apologies, name is required.').not().isEmpty(),
     check('lastName', 'Apologies, last name is required.').not().isEmpty(),
-    check('username', 'Apologies, the username requires a minimum of 6 characters.').isLength({ min: 6 }),
-    check('username', 'Apologies, the username only allows alphanumeric characters.').isAlphanumeric(),
-    check('email', 'Apologies, the entered email does not seem to be valid').isEmail(),
-    check('password', 'Apologies, the password requires a minimum of 8 characters.').isLength({ min: 8 }),
-    // eslint-disable-next-line consistent-return
-  ], (req, res) => {
+    check(
+      'username',
+      'Apologies, the username requires a minimum of 6 characters.',
+    ).isLength({ min: 6 }),
+    check(
+      'username',
+      'Apologies, the username only allows alphanumeric characters.',
+    ).isAlphanumeric(),
+    check(
+      'email',
+      'Apologies, the entered email does not seem to be valid',
+    ).isEmail(),
+    check(
+      'password',
+      'Apologies, the password requires a minimum of 8 characters.',
+    ).isLength({ min: 8 }),
+  ],
+  // eslint-disable-next-line consistent-return
+  (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
@@ -290,7 +309,8 @@ app.post('/users',
         console.error(err);
         res.status(500).send(`Error: ${err}`);
       });
-  });
+  },
+);
 
 // Endpoint 13: Allow users to update their data by username.
 app.put(
@@ -298,10 +318,22 @@ app.put(
   [
     check('name', 'Apologies, name is required.').not().isEmpty(),
     check('lastName', 'Apologies, last name is required.').not().isEmpty(),
-    check('username', 'Apologies, the username requires a minimum of 6 characters.').isLength({ min: 6 }),
-    check('username', 'Apologies, the username only allows alphanumeric characters.').isAlphanumeric(),
-    check('email', 'Apologies, the entered email does not seem to be valid').isEmail(),
-    check('password', 'Apologies, the password requires a minimum of 8 characters.').isLength({ min: 8 }),
+    check(
+      'username',
+      'Apologies, the username requires a minimum of 6 characters.',
+    ).isLength({ min: 6 }),
+    check(
+      'username',
+      'Apologies, the username only allows alphanumeric characters.',
+    ).isAlphanumeric(),
+    check(
+      'email',
+      'Apologies, the entered email does not seem to be valid',
+    ).isEmail(),
+    check(
+      'password',
+      'Apologies, the password requires a minimum of 8 characters.',
+    ).isLength({ min: 8 }),
   ],
   passport.authenticate('jwt', { session: false }),
   // eslint-disable-next-line consistent-return
