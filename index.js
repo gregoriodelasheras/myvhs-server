@@ -28,7 +28,7 @@ const allowedOrigins = [
   'http://localhost:8080',
   'http://localhost:1234',
   'https://myvhs.herokuapp.com/',
-  'https://myvhs.netlify.app/',
+  'https://myvhs.netlify.app',
 ];
 
 app.use(
