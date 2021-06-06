@@ -734,7 +734,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://myvhs.herokuapp.com/login?username=admindb&password=123456789",
+					"raw": "https://myvhs.herokuapp.com/login?username=&password=",
 					"protocol": "https",
 					"host": [
 						"myvhs",
@@ -747,11 +747,11 @@
 					"query": [
 						{
 							"key": "username",
-							"value": "admindb"
+							"value": ""
 						},
 						{
 							"key": "password",
-							"value": "123456789"
+							"value": ""
 						}
 					]
 				},
