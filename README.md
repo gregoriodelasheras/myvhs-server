@@ -15,6 +15,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#dev-dependencies">Dev Dependencies</a></li>
     <li><a href="#endpoints-design">Endpoints Design</a></li>
     <li><a href="#documentation">Documentation</a></li>
     <li><a href="#client-side">Client-side</a></li>
@@ -64,6 +65,7 @@ The development of this application was organized through a Kanban board. You ca
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Heroku](https://www.heroku.com/)
 
 ## Dependencies
 
@@ -71,7 +73,6 @@ The development of this application was organized through a Kanban board. You ca
 -	body-parser
 -	cors
 -	dotenv
--	eslint
 -	express
 -	express-validator
 -	jsonwebtoken
@@ -80,6 +81,10 @@ The development of this application was organized through a Kanban board. You ca
 -	passport
 -	passport-jwt
 -	passport-local
+
+## Dev Dependencies
+
+-	eslint
 
 ## Endpoints Design
 
