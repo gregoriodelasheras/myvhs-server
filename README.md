@@ -26,6 +26,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 ### Objective:
@@ -70,21 +71,21 @@ The development of this application was organized through a Kanban board. You ca
 ## Dependencies
 
 - bcrypt
--	body-parser
--	cors
--	dotenv
--	express
--	express-validator
--	jsonwebtoken
--	mongoose
--	morgan
--	passport
--	passport-jwt
--	passport-local
+- body-parser
+- cors
+- dotenv
+- express
+- express-validator
+- jsonwebtoken
+- mongoose
+- morgan
+- passport
+- passport-jwt
+- passport-local
 
 ## Dev Dependencies
 
--	eslint
+- eslint
 
 ## Endpoints Design
 
@@ -453,17 +454,18 @@ The development of this application was organized through a Kanban board. You ca
 
 ## Documentation
 
-To read the API documentation, please follow [this link](https://gregoriodelasheras.github.io/myVHS/public/documentation).
+To read the API documentation, please follow [this link](https://gregoriodelasheras.github.io/myvhs/public/documentation).
 
 ## Client-side
 
-To see the Client-side of the app, please check [this repository](https://github.com/gregoriodelasheras/myVHS-client).
+To see the Client-side of the app, please check [this repository](https://github.com/gregoriodelasheras/myvhs-client).
 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
+
 ## Contact
 
 Francisco Gregorio de las Heras: [LinkedIn](https://www.linkedin.com/in/francisco-gregorio-de-las-heras/)
@@ -471,7 +473,8 @@ Francisco Gregorio de las Heras: [LinkedIn](https://www.linkedin.com/in/francisc
 Project Link: [https://myvhs.herokuapp.com/](https://myvhs.herokuapp.com/)
 
 <!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
 
-* [Itua Akhator](https://github.com/iakhator)
-* [Vinh-Tuong Mai](https://github.com/mvtuong)
+- [Itua Akhator](https://github.com/iakhator)
+- [Vinh-Tuong Mai](https://github.com/mvtuong)

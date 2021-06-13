@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregoriodelasheras/myVHS.git"
+    "url": "git+https://github.com/gregoriodelasheras/myvhs.git"
   },
   "keywords": [],
   "author": "Francisco Gregorio de las Heras",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gregoriodelasheras/myVHS/issues"
+    "url": "https://github.com/gregoriodelasheras/myvhs/issues"
   },
-  "homepage": "https://github.com/gregoriodelasheras/myVHS#readme",
+  "homepage": "https://github.com/gregoriodelasheras/myvhs#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
