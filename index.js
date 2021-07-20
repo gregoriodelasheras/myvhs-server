@@ -25,10 +25,11 @@ const users = models.user;
 
 // CORS
 const allowedOrigins = [
-  'http://localhost:8080',
-  'http://localhost:1234',
-  'https://myvhs.herokuapp.com/',
-  'https://myvhs.netlify.app',
+  'http://localhost:8080', // Server-side localhost.
+  'http://localhost:1234', // Client-side React localhost.
+  'http://localhost:4200', // Client-side Angular localhost.
+  'https://myvhs.herokuapp.com', // Server-side website.
+  'https://myvhs.netlify.app', // Client-side React website.
 ];
 
 app.use(
