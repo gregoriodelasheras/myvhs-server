@@ -4,7 +4,7 @@
     <img src="img/logo.svg" alt="Logo" width="600">
   </a>
   <p align="center">
-    Web App for enthusiasts of 80's movies. All in one VHS! Built with its own API and the MERN stack.
+    Web App for enthusiasts of 80's movies. All in one VHS! Built with the MEN stack.
   </p>
 </p>
 
@@ -65,8 +65,8 @@ The development of this application was organized through a Kanban board. You ca
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
-- [Visual Studio Code](https://code.visualstudio.com/)
 - [Heroku](https://www.heroku.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Dependencies
 
