@@ -23,13 +23,14 @@ const directors = models.director;
 const actors = models.actor;
 const users = models.user;
 
-// CORS
+// CORS.
 const allowedOrigins = [
   'http://localhost:8080', // Server-side localhost.
   'http://localhost:1234', // Client-side React localhost.
   'http://localhost:4200', // Client-side Angular localhost.
   'https://myvhs.herokuapp.com', // Server-side website.
   'https://myvhs.netlify.app', // Client-side React website.
+  'https://herasdev.com/myvhs-client-a', // Client-side Angular website.
 ];
 
 app.use(
@@ -54,7 +55,7 @@ mongoose.connect(process.env.CONNECTION_URI, {
 
 require('./auth')(app);
 
-// Endpoint 0: Welcome message to the user
+// Endpoint 0: Welcome message to the user.
 app.get('/', (req, res) => {
   res.send(
     "Hi and welcome to myVHS! Get comfy, grab your favorite snacks and get ready for an exciting trip right back to the mind-blowing decade of the 80's!",
@@ -492,14 +493,14 @@ app.delete(
   },
 );
 
-// Error Handling
+// Error Handling.
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Oops! Something went wrong. Please try again later.');
 });
 
-// Port Listener
+// Port Listener.
 const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Listening on Port ${port}`);
