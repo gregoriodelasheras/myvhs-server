@@ -30,7 +30,7 @@ const allowedOrigins = [
   'http://localhost:4200', // Client-side Angular localhost.
   'https://myvhs.herokuapp.com', // Server-side website.
   'https://myvhs.netlify.app', // Client-side React website.
-  'https://herasdev.com/myvhs-client-a', // Client-side Angular website.
+  'https://herasdev.com', // Client-side Angular website (GitHub Pages).
 ];
 
 app.use(
