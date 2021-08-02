@@ -10,10 +10,11 @@ const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 
 /** @function
+ * @name validateUser
+ * @description Validate login data between client and server side
  * @param {string} usernameField
  * @param {string} passwordField
  * @returns {string} callback - Message with validation data
- * @description Validate login data between client and server side
  */
 passport.use(
   new LocalStrategy(
@@ -44,9 +45,10 @@ passport.use(
 );
 
 /** @function
+ * @name jwtHandler
+ * @description Extract JWT from the request
  * @param {object} jwtPayload
  * @param {object} callback
- * @description Extract JWT from the request
  */
 passport.use(
   new JWTStrategy(

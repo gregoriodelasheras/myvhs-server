@@ -11,8 +11,9 @@ const generateJWTToken = (user) => jwt.sign(user, process.env.JWT_SECRET, {
 });
 
 /** @function
- * @returns {json} - Username and user token
+ * @name loginUser
  * @description Allow users to log in the website
+ * @returns {json} - Username and user token
  */
 module.exports = (router) => {
   router.post('/login', (req, res) => {

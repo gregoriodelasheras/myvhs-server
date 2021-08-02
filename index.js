@@ -23,7 +23,10 @@ const directors = models.director;
 const actors = models.actor;
 const users = models.user;
 
-// Sites allowed (CORS policies)
+/** @constant
+ * @name allowedOrigins
+ * @description List of allowed websites (CORS policies)
+ */
 const allowedOrigins = [
   'http://localhost:8080', // Server-side localhost.
   'http://localhost:1234', // Client-side React localhost.
@@ -34,7 +37,8 @@ const allowedOrigins = [
 ];
 
 /** @function
- * @description Requests handling from websites
+ * @name corsHandler
+ * @description Handle website requests
  */
 app.use(
   cors({
@@ -49,11 +53,11 @@ app.use(
   }),
 );
 
-mongoose.Promise = global.Promise;
-
 /** @function
+ * @name databaseConnect
  * @description Create promise to connect to the database
  */
+mongoose.Promise = global.Promise;
 mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -62,8 +66,9 @@ mongoose.connect(process.env.CONNECTION_URI, {
 require('./auth')(app);
 
 /** @function
- * @returns {string} - Welcome message to the user
+ * @name welcomeUser
  * @description Welcome the user to the API
+ * @returns {string} - Welcome message to the user
  */
 app.get('/', (req, res) => {
   res.send(
@@ -72,8 +77,9 @@ app.get('/', (req, res) => {
 });
 
 /** @function
- * @returns {json} moviesQueried - All movies from database
+ * @name getMovies
  * @description Return a list of all movies to the user
+ * @returns {json} moviesQueried - All movies from database
  */
 app.get(
   '/movies',
@@ -92,9 +98,10 @@ app.get(
 );
 
 /** @function
+ * @name getMovie
+ * @description Return data about a single movie by ID to the user
  * @param {string} id - The movie's ID
  * @returns {json} movieQueried - Single movie from database
- * @description Return data about a single movie by ID to the user
  */
 app.get(
   '/movies/:id',
@@ -113,9 +120,10 @@ app.get(
 );
 
 /** @function
+ * @name getMovieCast
+ * @description Return a list of the actors of a movie by ID to the user
  * @param {string} id - The movie's ID
  * @returns {json} movieQueried.actors - All actors of single movie from database
- * @description Return a list of the actors of a movie by ID to the user
  */
 app.get(
   '/movies/:id/cast',
@@ -134,8 +142,9 @@ app.get(
 );
 
 /** @function
- * @returns {json} genresQueried - All movie genres from database
+ * @name getGenres
  * @description Return a list of all movie genres to the user
+ * @returns {json} genresQueried - All movie genres from database
  */
 app.get(
   '/genres',
@@ -154,9 +163,10 @@ app.get(
 );
 
 /** @function
+ * @name getGenre
+ * @description Return data about a movie genre by ID
  * @param {string} id - The genre's ID
  * @returns {json} genreQueried - Single movie genre from database
- * @description Return data about a movie genre by ID
  */
 app.get(
   '/genres/:id',
@@ -175,8 +185,9 @@ app.get(
 );
 
 /** @function
- * @returns {json} directorsQueried - All directors from database
+ * @name getDirectors
  * @description Return a list of all directors to the user
+ * @returns {json} directorsQueried - All directors from database
  */
 app.get(
   '/directors',
@@ -195,9 +206,10 @@ app.get(
 );
 
 /** @function
+ * @name getDirector
+ * @description Return data about a director by ID
  * @param {string} id - The director's ID
  * @returns {json} directorQueried - Single movie director from database
- * @description Return data about a director by ID
  */
 app.get(
   '/directors/:id',
@@ -216,8 +228,9 @@ app.get(
 );
 
 /** @function
- * @returns {json} actorsQueried - All actors from database
+ * @name getActors
  * @description Return a list of all actors to the user
+ * @returns {json} actorsQueried - All actors from database
  */
 app.get(
   '/actors',
@@ -236,9 +249,10 @@ app.get(
 );
 
 /** @function
+ * @name getActor
+ * @description Return data about an actor by ID
  * @param {string} id - The actor's ID
  * @returns {json} actorQueried - Single movie actor from database
- * @description Return data about an actor by ID
  */
 app.get(
   '/actors/:id',
@@ -257,8 +271,9 @@ app.get(
 );
 
 /** @function
- * @returns {json} usersQueried - All users from database
+ * @name getUsers
  * @description Allow an Admin to view all registered users in the database
+ * @returns {json} usersQueried - All users from database
  */
 app.get(
   '/users',
@@ -277,9 +292,10 @@ app.get(
 );
 
 /** @function
+ * @name getUser
+ * @description View a registered user in the database by username
  * @param {string} username - The user's username
  * @returns {json} userQueried - Single user from database
- * @description View a registered user in the database by username
  */
 app.get(
   '/users/:username',
@@ -298,9 +314,10 @@ app.get(
 );
 
 /** @function
+ * @name registerUser
+ * @description Register a new user in the database
  * @param {object} - New user registration data
  * @returns {json} userQueried - Response with the new registered user's data
- * @description Register a new user in the database
  */
 app.post(
   '/users',
@@ -368,10 +385,11 @@ app.post(
 );
 
 /** @function
+ * @name updateUser
+ * @description Update user's data by username
  * @param {object} - New updated user data
  * @param {string} username - The user's username
  * @returns {json} userQueried - Response with the new updated user data
- * @description Update user's data by username
  */
 app.put(
   '/users/:username',
@@ -430,9 +448,10 @@ app.put(
 );
 
 /** @function
+ * @name deleteUser
+ * @description Delete a user from the database by username
  * @param {string} username - The user's username
  * @returns {string} - Response with the confirmation of the user's deletion
- * @description Delete a user from the database by username
  */
 app.delete(
   '/users/:username',
@@ -463,10 +482,11 @@ app.delete(
 );
 
 /** @function
+ * @name addFavoriteMovie
+ * @description Add a movie to the Favorites list by movie ID
  * @param {string} username - The user's username
  * @param {string} movie_id - The movie's ID
  * @returns {json} userQueried - Response with the confirmation of the added film
- * @description Add a movie to the Favorites list by movie ID
  */
 app.post(
   '/users/:username/favorites/:movie_id',
@@ -491,10 +511,11 @@ app.post(
 );
 
 /** @function
+ * @name deleteFavoriteMovie
+ * @description Delete a movie from the Favorites list by movie ID
  * @param {string} username - The user's username
  * @param {string} movie_id - The movie's ID
  * @returns {json} userQueried - Response with the confirmation of the deleted film
- * @description Delete a movie from the Favorites list by movie ID
  */
 app.delete(
   '/users/:username/favorites/:movie_id',
@@ -519,10 +540,11 @@ app.delete(
 );
 
 /** @function
+ * @name addToWatchMovie
+ * @description Add a movie to the To-Watch list by movie ID
  * @param {string} username - The user's username
  * @param {string} movie_id - The movie's ID
  * @returns {json} userQueried - Response with the confirmation of the added film
- * @description Add a movie to the To-Watch list by movie ID
  */
 app.post(
   '/users/:username/towatch/:movie_id',
@@ -547,10 +569,11 @@ app.post(
 );
 
 /** @function
+ * @name deleteToWatchMovie
+ * @description Delete a movie from the To-Watch list by movie ID
  * @param {string} username - The user's username
  * @param {string} movie_id - The movie's ID
  * @returns {json} userQueried - Response with the confirmation of the deleted film
- * @description Delete a movie from the To-Watch list by movie ID
  */
 app.delete(
   '/users/:username/towatch/:movie_id',
@@ -575,7 +598,8 @@ app.delete(
 );
 
 /** @function
- * @description Error Handling
+ * @name errorHandler
+ * @description Handle errors
  */
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
@@ -584,7 +608,8 @@ app.use((err, req, res, next) => {
 });
 
 /** @function
- * @description Port Listener
+ * @name portListener
+ * @description Port listener for development environment
  */
 const port = process.env.PORT || 8080;
 app.listen(port, '0.0.0.0', () => {

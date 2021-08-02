@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-// Movies Mongoose Schema
+/** @constant
+ * @name movieSchema
+ * @description Movies Mongoose Schema
+ */
 const movieSchema = mongoose.Schema({
   title: { type: String, required: true },
   genre: [{ type: mongoose.Schema.Types.ObjectId, ref: 'genres' }],
@@ -13,13 +16,19 @@ const movieSchema = mongoose.Schema({
   description: { type: String, required: true },
 });
 
-// Genres Mongoose Schema
+/** @constant
+ * @name genreSchema
+ * @description Genres Mongoose Schema
+ */
 const genreSchema = mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
 });
 
-// Directors Mongoose Schema
+/** @constant
+ * @name directorSchema
+ * @description Directors Mongoose Schema
+ */
 const directorSchema = mongoose.Schema({
   name: { type: String, required: true },
   bio: String,
@@ -28,7 +37,10 @@ const directorSchema = mongoose.Schema({
   movies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'movies' }],
 });
 
-// Actors Mongoose Schema
+/** @constant
+ * @name actorSchema
+ * @description Actors Mongoose Schema
+ */
 const actorSchema = mongoose.Schema({
   name: { type: String, required: true },
   bio: String,
@@ -37,7 +49,10 @@ const actorSchema = mongoose.Schema({
   movies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'movies' }],
 });
 
-// Users Mongoose Schema
+/** @constant
+ * @name userSchema
+ * @description Users Mongoose Schema
+ */
 const userSchema = mongoose.Schema({
   name: { type: String, required: true },
   lastName: { type: String, required: true },
@@ -51,17 +66,18 @@ const userSchema = mongoose.Schema({
 });
 
 /** @function
- * @param {string} password
- * @param {number} 10 - Hashing salt
+ * @name hashUserPassword
  * @description Generate hash for the password (auto-gen a salt of 10 and hash)
+ * @param {string} password
+ * @param {number} - Hashing salt
  */
 userSchema.statics.hashPassword = (password) => bcrypt.hashSync(password, 10);
 
 /** @function
- * @name validatePassword
+ * @name validateUserPassword
+ * @description Compare stored hashed password with password entered on client side
  * @param {string} password
  * @returns {string } password, this.password - Return comparison of received passwords
- * @description Compare stored hashed password with password entered on client side
  */
 userSchema.methods.validatePassword = function validatePassword(password) {
   return bcrypt.compareSync(password, this.password);
