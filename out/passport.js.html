@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: auth.js</title>
+    <title>JSDoc: Source: passport.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: auth.js</h1>
+    <h1 class="page-title">Source: passport.js</h1>
 
     
 
@@ -26,43 +26,71 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const jwt = require('jsonwebtoken');
+            <pre class="prettyprint source linenums"><code>/* eslint-disable no-console */
 const passport = require('passport');
-
+const LocalStrategy = require('passport-local').Strategy;
+const passportJWT = require('passport-jwt');
+const models = require('./models.js');
 require('dotenv').config();
-require('./passport');
 
-const generateJWTToken = (user) => jwt.sign(user, process.env.JWT_SECRET, {
-  subject: user.username,
-  expiresIn: '7d',
-  algorithm: 'HS256',
-});
+const users = models.user;
+const JWTStrategy = passportJWT.Strategy;
+const ExtractJWT = passportJWT.ExtractJwt;
 
 /** @function
- * @name loginUser
- * @description Allow users to log in the website
- * @returns {json} - Username and user token
+ * @name validateUser
+ * @description Validate login data between client and server side
+ * @param {string} usernameField
+ * @param {string} passwordField
+ * @returns {string} callback - Message with validation data
  */
-module.exports = (router) => {
-  router.post('/login', (req, res) => {
-    // eslint-disable-next-line consistent-return
-    passport.authenticate('local', { session: false }, (err, user) => {
-      if (err || !user) {
-        return res.status(400).json({
-          message: 'Oops! Username or password wrong. Please try again.',
-          user,
-        });
-      }
-      req.login(user, { session: false }, () => {
+passport.use(
+  new LocalStrategy(
+    {
+      usernameField: 'username',
+      passwordField: 'password',
+    },
+    (usernamePassport, passwordPassport, callback) => {
+      users.findOne({ username: usernamePassport }, (err, user) => {
         if (err) {
-          res.send(err);
+          console.error(err);
+          return callback(err);
         }
-        const token = generateJWTToken(user.toJSON());
-        return res.json({ user, token });
+        if (!user) {
+          return callback(null, false, {
+            message: 'Oops! Incorrect username. Please try again.',
+          });
+        }
+        if (!user.validatePassword(passwordPassport)) {
+          return callback(null, false, {
+            message: 'Oops! Incorrect password. Please try again.',
+          });
+        }
+        return callback(null, user);
       });
-    })(req, res);
-  });
-};
+    },
+  ),
+);
+
+/** @function
+ * @name jwtHandler
+ * @description Extract JWT from the request
+ * @param {object} jwtPayload
+ * @param {object} callback
+ */
+passport.use(
+  new JWTStrategy(
+    {
+      jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+      secretOrKey: process.env.JWT_SECRET,
+    },
+    (jwtPayload, callback) => users
+    // eslint-disable-next-line no-underscore-dangle
+      .findById(jwtPayload._id)
+      .then((user) => callback(null, user))
+      .catch((err) => callback(err)),
+  ),
+);
 </code></pre>
         </article>
     </section>

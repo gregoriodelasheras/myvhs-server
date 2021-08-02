@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Tutorial: tutorials</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Tutorial: tutorials</h1>
+
+    <section>
+
+<header>
+    
+
+    <h2>tutorials</h2>
+</header>
+
+<article>
+    <!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://myvhs.herokuapp.com/">
+    <img src="img/logo.svg" alt="Logo" width="600">
+  </a>
+  <p align="center">
+    Web App for enthusiasts of 80's movies. All in one VHS! Built with the MEN stack.
+  </p>
+</p>
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#dev-dependencies">Dev Dependencies</a></li>
+    <li><a href="#endpoints-design">Endpoints Design</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#client-side">Client-side</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+##About The Project
+
+
+### Objective:
+
+- Build a web application that provides users with access to information about different movies, genres, directors and actors of the 1980s. Users are able to register, update their personal information, deregister and create a list of "Favorites" and "To Watch" movies.
+
+### User Stories:
+
+- As a user, I want to be able to receive information on movies, genres, directors and actors of the 1980s so that I can learn more about movies I’ve watched or am interested in.
+- As a user, I want to have a "Favorites" list and a "To Watch" list, and add and remove movies from them.
+- As a user, I want to access a simple web application with a minimalist interface, displaying only essential information.
+- As a user, I want to be able to create a profile so I can save data about my favorite movies.
+- As a user, I want to be able to update my personal data.
+- As a user, I want to be able to deregister my profile from the web application database.
+
+### Key Features:
+
+- Return a list of movies of the 80's to the user.
+- Return data about a single movie by title to the user.
+- Return data about movie genres to the user.
+- Return data about directors and actors to the user.
+- Allow new users to register.
+- Allow users to update their data by username.
+- Allow existing users to deregister by username.
+- Allow users to add and remove movies to their "Favorites" list by movie ID.
+- Allow users to add and remove movies to their "To Watch" list by movie ID.
+- Secure access to the API data: authentication and authorization with HTTP and JSON Web Token.
+
+### Kanban Board:
+
+The development of this application was organized through a Kanban board. You can see the board by [following this link](https://trello.com/b/6PPcluVZ/myvhs-server-side).
+
+## Built With
+
+- [JavaScript](https://www.javascript.com/)
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Heroku](https://www.heroku.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+## Dependencies
+
+- bcrypt
+- body-parser
+- cors
+- dotenv
+- express
+- express-validator
+- jsonwebtoken
+- mongoose
+- morgan
+- passport
+- passport-jwt
+- passport-local
+
+## Dev Dependencies
+
+- eslint
+
+## Endpoints Design
+
+## Documentation
+
+To read the API documentation, please follow [this link](https://gregoriodelasheras.github.io/myvhs/public/documentation).
+
+## Client-side
+
+To see the Client-side of the app, please check [this repository](https://github.com/gregoriodelasheras/myvhs-client).
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+Francisco Gregorio de las Heras: [LinkedIn](https://www.linkedin.com/in/francisco-gregorio-de-las-heras/)
+
+Project Link: [https://myvhs.herokuapp.com/](https://myvhs.herokuapp.com/)
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+- [Itua Akhator](https://github.com/iakhator)
+- [Vinh-Tuong Mai](https://github.com/mvtuong)
+</article>
+
+</section>
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Tutorials</h3><ul><li><a href="tutorial-tutorials.html">tutorials</a></li></ul><h3>Global</h3><ul><li><a href="global.html#actorSchema">actorSchema</a></li><li><a href="global.html#addFavoriteMovie">addFavoriteMovie</a></li><li><a href="global.html#addToWatchMovie">addToWatchMovie</a></li><li><a href="global.html#allowedOrigins">allowedOrigins</a></li><li><a href="global.html#corsHandler">corsHandler</a></li><li><a href="global.html#databaseConnect">databaseConnect</a></li><li><a href="global.html#deleteFavoriteMovie">deleteFavoriteMovie</a></li><li><a href="global.html#deleteToWatchMovie">deleteToWatchMovie</a></li><li><a href="global.html#deleteUser">deleteUser</a></li><li><a href="global.html#directorSchema">directorSchema</a></li><li><a href="global.html#errorHandler">errorHandler</a></li><li><a href="global.html#genreSchema">genreSchema</a></li><li><a href="global.html#getActor">getActor</a></li><li><a href="global.html#getActors">getActors</a></li><li><a href="global.html#getDirector">getDirector</a></li><li><a href="global.html#getDirectors">getDirectors</a></li><li><a href="global.html#getGenre">getGenre</a></li><li><a href="global.html#getGenres">getGenres</a></li><li><a href="global.html#getMovie">getMovie</a></li><li><a href="global.html#getMovieCast">getMovieCast</a></li><li><a href="global.html#getMovies">getMovies</a></li><li><a href="global.html#getUser">getUser</a></li><li><a href="global.html#getUsers">getUsers</a></li><li><a href="global.html#hashUserPassword">hashUserPassword</a></li><li><a href="global.html#jwtHandler">jwtHandler</a></li><li><a href="global.html#loginUser">loginUser</a></li><li><a href="global.html#movieSchema">movieSchema</a></li><li><a href="global.html#portListener">portListener</a></li><li><a href="global.html#registerUser">registerUser</a></li><li><a href="global.html#updateUser">updateUser</a></li><li><a href="global.html#userSchema">userSchema</a></li><li><a href="global.html#validateUser">validateUser</a></li><li><a href="global.html#validateUserPassword">validateUserPassword</a></li><li><a href="global.html#welcomeUser">welcomeUser</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Mon Aug 02 2021 02:29:33 GMT+0200 (hora de verano de Europa central)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
